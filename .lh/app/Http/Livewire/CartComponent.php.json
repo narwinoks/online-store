@@ -1,0 +1,18 @@
+{
+    "sourceFile": "app/Http/Livewire/CartComponent.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1662564788746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1662564788746,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Livewire;\n\nuse Livewire\\Component;\n\nclass CartComponent extends Component\n{\n    public function render()\n    {\n        return view('livewire.cart-component')->layout('Layouts.base');\n    }\n}\n"
+        }
+    ]
+}

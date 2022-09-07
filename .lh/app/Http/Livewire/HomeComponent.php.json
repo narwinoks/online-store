@@ -1,0 +1,30 @@
+{
+    "sourceFile": "app/Http/Livewire/HomeComponent.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1662563141584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662563147201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n class HomeComponent extends Component\n {\n     public function render()\n     {\n-        return view('livewire.home-component')-;\n+        return view('livewire.home-component')->layo;\n     }\n }\n"
+                },
+                {
+                    "date": 1662563153109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n class HomeComponent extends Component\n {\n     public function render()\n     {\n-        return view('livewire.home-component')->layo;\n+        return view('livewire.home-component')->layout();\n     }\n }\n"
+                },
+                {
+                    "date": 1662563162908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n class HomeComponent extends Component\n {\n     public function render()\n     {\n-        return view('livewire.home-component')->layout();\n+        return view('livewire.home-component')->layout('Layouts.base');\n     }\n }\n"
+                }
+            ],
+            "date": 1662563141584,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Livewire;\n\nuse Livewire\\Component;\n\nclass HomeComponent extends Component\n{\n    public function render()\n    {\n        return view('livewire.home-component')-;\n    }\n}\n"
+        }
+    ]
+}

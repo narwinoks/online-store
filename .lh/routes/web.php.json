@@ -1,0 +1,94 @@
+{
+    "sourceFile": "routes/web.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 19,
+            "patches": [
+                {
+                    "date": 1662563176849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662563183182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n \n Route::get('/', function () {\n     return view('welcome');\n });\n-Route\n+Route::get('/admin', function () {  }\n"
+                },
+                {
+                    "date": 1662563189044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n \n Route::get('/', function () {\n     return view('welcome');\n });\n-Route::get('/admin', function () {  }\n+Route::get('/admin', )\n"
+                },
+                {
+                    "date": 1662563199435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+use App\\Http\\Livewire\\HomeComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n /*\n |--------------------------------------------------------------------------\n@@ -15,5 +16,5 @@\n \n Route::get('/', function () {\n     return view('welcome');\n });\n-Route::get('/admin', )\n+Route::get('/admin', HomeComponent::cla)\n"
+                },
+                {
+                    "date": 1662563205689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n \n Route::get('/', function () {\n     return view('welcome');\n });\n-Route::get('/admin', HomeComponent::cla)\n+Route::get('/admin', HomeComponent::class)\n"
+                },
+                {
+                    "date": 1662563211992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n | contains the \"web\" middleware group. Now create something great!\n |\n */\n \n-Route::get('/', function () {\n-    return view('welcome');\n-});\n-Route::get('/admin', HomeComponent::class)\n+// Route::get('/', function () {\n+//     return view('welcome');\n+// });\n+Route::get('/', HomeComponent::class)\n"
+                },
+                {
+                    "date": 1662564661129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,6 @@\n \n // Route::get('/', function () {\n //     return view('welcome');\n // });\n-Route::get('/', HomeComponent::class)\n+Route::get('/', HomeComponent::class);\n+\n"
+                },
+                {
+                    "date": 1662564667483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-\n+Route::get\n"
+                },
+                {
+                    "date": 1662564673874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get\n+Route::get'shop',\n"
+                },
+                {
+                    "date": 1662564682093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Livewire\\HomeComponent;\n+use App\\Http\\Livewire\\ShopComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n /*\n |--------------------------------------------------------------------------\n@@ -17,5 +18,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get'shop',\n+Route::get'shop',ShopComponent::Cla\n"
+                },
+                {
+                    "date": 1662564687886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get'shop',ShopComponent::Cla\n+Route::get'shop',ShopComponent::class\n"
+                },
+                {
+                    "date": 1662564695013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get'shop',ShopComponent::class\n+Route::get'shop',ShopComponent::class)\n"
+                },
+                {
+                    "date": 1662564706107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get'shop',ShopComponent::class)\n+Route::get('shop',ShopComponent::class)\n"
+                },
+                {
+                    "date": 1662564712404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,6 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get('shop',ShopComponent::class)\n+Route::get('shop',ShopComponent::class);\n+Route::get('shop',ShopComponent::class);\n"
+                },
+                {
+                    "date": 1662564719169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get('shop',ShopComponent::class);\n-Route::get('shop',ShopComponent::class);\n+Route::get('/shop',ShopComponent::class);\n+Route::get('/catd',ShopComponent::class);\n"
+                },
+                {
+                    "date": 1662564726504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n-Route::get('/catd',ShopComponent::class);\n+Route::get('/cart',car::class);\n"
+                },
+                {
+                    "date": 1662564741687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+use App\\Http\\Livewire\\CartComponent;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n@@ -19,5 +20,6 @@\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n-Route::get('/cart',car::class);\n+Route::get('/cart',CartComponent::class);\n+Route::get('/cart',CartComponent::class);\n"
+                },
+                {
+                    "date": 1662564747762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,5 @@\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n-Route::get('/cart',CartComponent::class);\n+Route::get('/checkout',CartComponent::class);\n"
+                },
+                {
+                    "date": 1662564754955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,5 @@\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n-Route::get('/checkout',CartComponent::class);\n+Route::get('/checkout',che:class);\n"
+                },
+                {
+                    "date": 1662564763612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Livewire\\CartComponent;\n+use App\\Http\\Livewire\\CheckoutComponent;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n@@ -21,5 +22,5 @@\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n-Route::get('/checkout',che:class);\n+Route::get('/checkout',CheckoutComponent:class);\n"
+                }
+            ],
+            "date": 1662563176849,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Support\\Facades\\Route;\n\n/*\n|--------------------------------------------------------------------------\n| Web Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register web routes for your application. These\n| routes are loaded by the RouteServiceProvider within a group which\n| contains the \"web\" middleware group. Now create something great!\n|\n*/\n\nRoute::get('/', function () {\n    return view('welcome');\n});\nRoute\n"
+        }
+    ]
+}
