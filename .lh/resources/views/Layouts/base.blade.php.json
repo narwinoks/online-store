@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 21,
+            "activePatchIndex": 22,
             "patches": [
                 {
                     "date": 1662562612297,
@@ -92,6 +92,10 @@
                 {
                     "date": 1662562941799,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1486,7 +1486,7 @@\n \t<script src=\"{{  asset('assets/js/owl.carousel.min.js')}}\"></script>\n \t<script src=\"{{  asset('assets/js/jquery.countdown.min.js')}}\"></script>\n \t<script src=\"{{  asset('assets/js/jquery.sticky.js')}}\"></script>\n \t<script src=\"{{  asset('assets/js/functions.js')}}\"></script>\n-    \n+    @\n </body>\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662646298362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,9 +68,9 @@\n \t\t\t\t\t\t\t\t\t</ul>\n \t\t\t\t\t\t\t\t</li>\n \t\t\t\t\t\t\t\t@if (Route::has('login'))\n \t\t\t\t\t\t\t\t\t@auth\n-\t\t\t\t\t\t\t\t\t\t@if (Auth::user)\n+\t\t\t\t\t\t\t\t\t\t@if (Auth::user())\n \t\t\t\t\t\t\t\t\t\t\t\n \t\t\t\t\t\t\t\t\t\t@endif\n \t\t\t\t\t\t\t\t\t@else\n \t\t\t\t\t\t\t\t\t<li class=\"menu-item\" ><a title=\"Register or Login\" href=\"{{ route('login') }}\">Login</a></li>\n"
                 }
             ],
             "date": 1662562612297,

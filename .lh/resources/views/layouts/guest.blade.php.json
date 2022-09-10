@@ -1,0 +1,54 @@
+{
+    "sourceFile": "resources/views/layouts/guest.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1662647847425,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662647853746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,14 +10,13 @@\n         <!-- Fonts -->\n         <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n \n         <!-- Scripts -->\n-        @vite(['resources/css/app.css', 'resources/js/app.js'])\n+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\n     </head>\n     <body>\n         <div class=\"font-sans text-gray-900 antialiased\">\n             {{ $slot }}\n         </div>\n         {{ mix('resources/css/app.js') }}\n-\n     </body>\n </html>\n"
+                },
+                {
+                    "date": 1662647861656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n         <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n \n         <!-- Scripts -->\n         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\n+        {{ mix('resources/css/app.css') }}\n+\n     </head>\n     <body>\n         <div class=\"font-sans text-gray-900 antialiased\">\n             {{ $slot }}\n"
+                },
+                {
+                    "date": 1662647890755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n \n         <!-- Scripts -->\n         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\n-        {{ mix('resources/css/app.css') }}\n+        {{-- {{ mix('resources/css/app.css') }} --}}\n \n     </head>\n     <body>\n         <div class=\"font-sans text-gray-900 antialiased\">\n"
+                },
+                {
+                    "date": 1662647928167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n \n         <!-- Scripts -->\n         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\n-        {{-- {{ mix('resources/css/app.css') }} --}}\n+        {{ mix('resources/css/app.css') }}\n \n     </head>\n     <body>\n         <div class=\"font-sans text-gray-900 antialiased\">\n"
+                },
+                {
+                    "date": 1662647967252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n \n         <!-- Scripts -->\n         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\n-        {{ mix('resources/css/app.css') }}\n+        {{ mix('resources/css/app.css')\n \n     </head>\n     <body>\n         <div class=\"font-sans text-gray-900 antialiased\">\n"
+                },
+                {
+                    "date": 1662648019339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,14 @@\n         <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n \n         <!-- Scripts -->\n         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\n-        {{ mix('resources/css/app.css')\n+        {{ mix('resources/css/app.css') }}\n \n     </head>\n     <body>\n         <div class=\"font-sans text-gray-900 antialiased\">\n             {{ $slot }}\n         </div>\n-        {{ mix('resources/css/app.js') }}\n+       <script src=\"{{ mix('/js/app.js') }}\"></script>\n     </body>\n </html>\n"
+                },
+                {
+                    "date": 1662648026867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n \n         <!-- Scripts -->\n         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\n         {{ mix('resources/css/app.css') }}\n+        sty\n \n     </head>\n     <body>\n         <div class=\"font-sans text-gray-900 antialiased\">\n"
+                },
+                {
+                    "date": 1662650709450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n         <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n \n         <!-- Scripts -->\n         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\n-        {{ mix('resources/css/app.css') }}\n-        sty\n+        {{-- {{ mix('resources/css/app.css') }} --}}\n+        <style></style>\n \n     </head>\n     <body>\n         <div class=\"font-sans text-gray-900 antialiased\">\n"
+                },
+                {
+                    "date": 1662650804045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n \n         <!-- Scripts -->\n         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}\n         {{-- {{ mix('resources/css/app.css') }} --}}\n+        <link href=\"{{ asset('css/app.css') }}\" rel=\"stylesheet\">\n         <style></style>\n \n     </head>\n     <body>\n"
+                }
+            ],
+            "date": 1662647847425,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"{{ str_replace('_', '-', app()->getLocale()) }}\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <meta name=\"csrf-token\" content=\"{{ csrf_token() }}\">\n\n        <title>{{ config('app.name', 'Laravel') }}</title>\n\n        <!-- Fonts -->\n        <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap\">\n\n        <!-- Scripts -->\n        @vite(['resources/css/app.css', 'resources/js/app.js'])\n    </head>\n    <body>\n        <div class=\"font-sans text-gray-900 antialiased\">\n            {{ $slot }}\n        </div>\n        {{ mix('resources/css/app.js') }}\n\n    </body>\n</html>\n"
+        }
+    ]
+}

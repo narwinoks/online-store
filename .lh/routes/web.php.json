@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 19,
+            "activePatchIndex": 42,
             "patches": [
                 {
                     "date": 1662563176849,
@@ -84,6 +84,98 @@
                 {
                     "date": 1662564763612,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Livewire\\CartComponent;\n+use App\\Http\\Livewire\\CheckoutComponent;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n@@ -21,5 +22,5 @@\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n-Route::get('/checkout',che:class);\n+Route::get('/checkout',CheckoutComponent:class);\n"
+                },
+                {
+                    "date": 1662650963622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,5 +22,15 @@\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n-Route::get('/checkout',CheckoutComponent:class);\n+Route::get('/checkout',CheckoutComponent::class);\n+\n+// Route::middleware([\n+//     'auth:sanctum',\n+//     config('jetstream.auth_session'),\n+//     'verified'\n+// ])->group(function () {\n+//     Route::get('/dashboard', function () {\n+//         return view('dashboard');\n+//     })->name('dashboard');\n+// });\n"
+                },
+                {
+                    "date": 1662650969726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,4 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n+Route::middleware(\n"
+                },
+                {
+                    "date": 1662650981537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-Route::middleware(\n+Route::middleware(['auth:sanctum']\n"
+                },
+                {
+                    "date": 1662650988930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-Route::middleware(['auth:sanctum']\n+Route::middleware(['auth:sanctum'])\n"
+                },
+                {
+                    "date": 1662650994066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-Route::middleware(['auth:sanctum'])\n+Route::middleware(['auth:sanctum','verified'])\n"
+                },
+                {
+                    "date": 1662650999802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-Route::middleware(['auth:sanctum','verified'])\n+Route::middleware(['auth:sanctum','verified'])->group(function () {\n"
+                },
+                {
+                    "date": 1662651007164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,4 +34,6 @@\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n+    \n+});\n"
+                },
+                {
+                    "date": 1662651030687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,8 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n+// FOR USER OR CUSOT\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    \n+\n });\n"
+                },
+                {
+                    "date": 1662651058513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,9 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-// FOR USER OR CUSOT\n+// FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n \n });\n+// \n"
+                },
+                {
+                    "date": 1662651064352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,5 +37,5 @@\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n \n });\n-// \n+// FOR ADMIN\n"
+                },
+                {
+                    "date": 1662651084264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,5 +37,8 @@\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n \n });\n+Route::middleware(['auth:sanctum','verified'])->group(function () {\n+\n+});\n // FOR ADMIN\n"
+                },
+                {
+                    "date": 1662816522242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,8 @@\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n \n });\n-Route::middleware(['auth:sanctum','verified'])->group(function () {\n+// FOR ADMIN\n+Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n });\n-// FOR ADMIN\n"
+                },
+                {
+                    "date": 1662816528828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-\n+    Route::get('/dashboard', function () {  \n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816535453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/dashboard', function () {  \n+    Route::get('//dashboard',\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816542152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('//dashboard',\n+    Route::get('/user/dashboard',)\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816549636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',)\n+    Route::get('/user/dashboard',[User])\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816556529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n use App\\Http\\Livewire\\CartComponent;\n use App\\Http\\Livewire\\CheckoutComponent;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n+use App\\Http\\Livewire\\User\\UserDashboardComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n /*\n |--------------------------------------------------------------------------\n@@ -35,9 +36,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',[User])\n+    Route::get('/user/dashboard',[UserDashboardComponent::class])\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816567126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',[UserDashboardComponent::class])\n+    Route::get('/user/dashboard',[UserDashboardComponent::class)\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816576000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',[UserDashboardComponent::class)\n+    Route::get('/user/dashboard',UserDashboardComponent::class);\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816582314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,7 @@\n     Route::get('/user/dashboard',UserDashboardComponent::class);\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n+    Route::get('/user/dashboard',UserDashboardComponent::class);\n \n });\n"
+                },
+                {
+                    "date": 1662816587913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+use App\\Http\\Livewire\\Admin\\AdminDashboardComponent;\n use App\\Http\\Livewire\\CartComponent;\n use App\\Http\\Livewire\\CheckoutComponent;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n@@ -40,7 +41,6 @@\n     Route::get('/user/dashboard',UserDashboardComponent::class);\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n-    Route::get('/user/dashboard',UserDashboardComponent::class);\n-\n+    Route::get('/user/dashboard',AdminDashboardComponent::class);\n });\n"
+                },
+                {
+                    "date": 1662816614085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',UserDashboardComponent::class);\n+    Route::get('/user/dashboard',UserDashboardComponent::class)->name();\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n-    Route::get('/user/dashboard',AdminDashboardComponent::class);\n+    Route::get('/admin/dashboard',AdminDashboardComponent::class);\n });\n"
+                },
+                {
+                    "date": 1662816621925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',UserDashboardComponent::class)->name();\n+    Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n-    Route::get('/admin/dashboard',AdminDashboardComponent::class);\n+    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name();\n });\n"
                 }
             ],
             "date": 1662563176849,

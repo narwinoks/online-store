@@ -42,8 +42,6 @@
 						</div>
 						<div class="topbar-menu right-menu">
 							<ul>
-								<li class="menu-item" ><a title="Register or Login" href="login.html">Login</a></li>
-								<li class="menu-item" ><a title="Register or Login" href="register.html">Register</a></li>
 								<li class="menu-item lang-menu menu-item-has-children parent">
 									<a title="English" href="#"><span class="img label-before"><img src="assets/images/lang-en.png" alt="lang-en"></span>English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu lang" >
@@ -67,6 +65,46 @@
 										</li>
 									</ul>
 								</li>
+								@if (Route::has('login'))
+								@auth
+								@if (Auth::user()->utype=='ADM')
+								<li class="menu-item menu-item-has-children parent" >
+									<a title="MY Accoutn" href="#">My Account ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<ul class="submenu curency" >
+										<li class="menu-item" >
+											<a title="dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
+										</li>
+										<form action="{{ route('logout') }}" method="post">
+											@csrf
+											@method('POST')
+											<li class="menu-item" >
+												<a title="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); .closest('form').submit">Logout</a>
+											</li>
+										</form>
+									</ul>
+								</li>
+								@else
+								<li class="menu-item menu-item-has-children parent" >
+									<a title="MY Accoutn" href="#">My Account ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<ul class="submenu curency" >
+										<li class="menu-item" >
+											<a title="logout" href="{{ route('user.dashboard') }}">Dashboard</a>
+										</li>
+										<form action="{{ route('logout') }}" method="post" id="my_form">
+											@csrf
+											@method('POST')
+											<li class="menu-item" >
+												<a title="logout"href="javascript:{}" onclick="document.getElementById('my_form').submit();">Logout</a>
+											</li>
+										</form>
+									</ul>
+								</li>
+								@endif
+								@else
+								<li class="menu-item" ><a title="Register or Login" href="{{ route('login') }}">Login</a></li>
+								<li class="menu-item" ><a title="Register or Login" href="{{ route('register') }}">Register</a></li>
+							@endif	
+							@endif	
 							</ul>
 						</div>
 					</div>

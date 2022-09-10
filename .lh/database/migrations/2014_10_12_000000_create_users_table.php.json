@@ -1,0 +1,54 @@
+{
+    "sourceFile": "database/migrations/2014_10_12_000000_create_users_table.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1662645971612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662645977087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('password');\n             $table->rememberToken();\n             $table->foreignId('current_team_id')->nullable();\n             $table->string('profile_photo_path', 2048)->nullable();\n-            $table\n+            $table->string('\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662645984263,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('password');\n             $table->rememberToken();\n             $table->foreignId('current_team_id')->nullable();\n             $table->string('profile_photo_path', 2048)->nullable();\n-            $table->string('\n+            $table->string('utype\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662645990339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('password');\n             $table->rememberToken();\n             $table->foreignId('current_team_id')->nullable();\n             $table->string('profile_photo_path', 2048)->nullable();\n-            $table->string('utype\n+            $table->string('utype')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662645997162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('password');\n             $table->rememberToken();\n             $table->foreignId('current_team_id')->nullable();\n             $table->string('profile_photo_path', 2048)->nullable();\n-            $table->string('utype')\n+            $table->string('utype')->default()\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662646006188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('password');\n             $table->rememberToken();\n             $table->foreignId('current_team_id')->nullable();\n             $table->string('profile_photo_path', 2048)->nullable();\n-            $table->string('utype')->default()\n+            $table->string('utype')->default('USR')->comment()\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662646012785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('password');\n             $table->rememberToken();\n             $table->foreignId('current_team_id')->nullable();\n             $table->string('profile_photo_path', 2048)->nullable();\n-            $table->string('utype')->default('USR')->comment()\n+            $table->string('utype')->default('USR')->comment('ADM')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662646017898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('password');\n             $table->rememberToken();\n             $table->foreignId('current_team_id')->nullable();\n             $table->string('profile_photo_path', 2048)->nullable();\n-            $table->string('utype')->default('USR')->comment('ADM')\n+            $table->string('utype')->default('USR')->comment('ADM from admin ')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662646023739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('password');\n             $table->rememberToken();\n             $table->foreignId('current_team_id')->nullable();\n             $table->string('profile_photo_path', 2048)->nullable();\n-            $table->string('utype')->default('USR')->comment('ADM from admin ')\n+            $table->string('utype')->default('USR')->comment('ADM from admin And USR from ')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662646031494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('password');\n             $table->rememberToken();\n             $table->foreignId('current_team_id')->nullable();\n             $table->string('profile_photo_path', 2048)->nullable();\n-            $table->string('utype')->default('USR')->comment('ADM from admin And USR from ')\n+            $table->string('utype')->default('USR')->comment('ADM from admin And USR from user or customer');\n             $table->timestamps();\n         });\n     }\n \n"
+                }
+            ],
+            "date": 1662645971612,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Database\\Migrations\\Migration;\nuse Illuminate\\Database\\Schema\\Blueprint;\nuse Illuminate\\Support\\Facades\\Schema;\n\nreturn new class extends Migration\n{\n    /**\n     * Run the migrations.\n     *\n     * @return void\n     */\n    public function up()\n    {\n        Schema::create('users', function (Blueprint $table) {\n            $table->id();\n            $table->string('name');\n            $table->string('email')->unique();\n            $table->timestamp('email_verified_at')->nullable();\n            $table->string('password');\n            $table->rememberToken();\n            $table->foreignId('current_team_id')->nullable();\n            $table->string('profile_photo_path', 2048)->nullable();\n            $table\n            $table->timestamps();\n        });\n    }\n\n    /**\n     * Reverse the migrations.\n     *\n     * @return void\n     */\n    public function down()\n    {\n        Schema::dropIfExists('users');\n    }\n};\n"
+        }
+    ]
+}
