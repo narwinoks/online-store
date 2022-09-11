@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 80,
+            "activePatchIndex": 89,
             "patches": [
                 {
                     "date": 1662564917571,
@@ -328,6 +328,42 @@
                 {
                     "date": 1662881802420,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n \t\t\t\t\t\t\t\t\t\t</div>\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-info\">\n \t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ route('product.details',['slug'=>$product->slug]) }}\" class=\"product-name\"><span>{{ $product->name }}</span></a>\n \t\t\t\t\t\t\t\t\t\t\t<div class=\"wrap-price\"><span class=\"product-price\">{{ $product->regular_price }}</span></div>\n-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" wire:click.prevent=\"store({{ $product->id,'{{ $product->name }}',{{ $product->regular_price }})\" class=\"btn add-to-cart\">Add To Cart</a>\n+\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" wire:click.prevent=\"store({{ $product->id}},'{{ $product->name }}',{{ $product->regular_price }})\" class=\"btn add-to-cart\">Add To Cart</a>\n \t\t\t\t\t\t\t\t\t\t</div>\n \t\t\t\t\t\t\t\t\t</div>\n \t\t\t\t\t\t\t\t</li>\n \t\t\t\t\t\t\t@endforeach\n"
+                },
+                {
+                    "date": 1662898448883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \n \t\t\t\t\t\t<div class=\"wrap-right\">\n \n \t\t\t\t\t\t\t<div class=\"sort-item orderby \">\n-\t\t\t\t\t\t\t\t<select name=\"orderby\" class=\"use-chosen\" >\n+\t\t\t\t\t\t\t\t<select name=\"orderby\" class=\"use-chosen\" wire>\n \t\t\t\t\t\t\t\t\t<option value=\"menu_order\" selected=\"selected\">Default sorting</option>\n \t\t\t\t\t\t\t\t\t<option value=\"popularity\">Sort by popularity</option>\n \t\t\t\t\t\t\t\t\t<option value=\"rating\">Sort by average rating</option>\n \t\t\t\t\t\t\t\t\t<option value=\"date\">Sort by newness</option>\n"
+                },
+                {
+                    "date": 1662898456758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n \n \t\t\t\t\t\t<div class=\"wrap-right\">\n \n \t\t\t\t\t\t\t<div class=\"sort-item orderby \">\n-\t\t\t\t\t\t\t\t<select name=\"orderby\" class=\"use-chosen\" wire>\n+\t\t\t\t\t\t\t\t<select name=\"orderby\" class=\"use-chosen\" wire:model=\"sorting\">\n \t\t\t\t\t\t\t\t\t<option value=\"menu_order\" selected=\"selected\">Default sorting</option>\n \t\t\t\t\t\t\t\t\t<option value=\"popularity\">Sort by popularity</option>\n \t\t\t\t\t\t\t\t\t<option value=\"rating\">Sort by average rating</option>\n \t\t\t\t\t\t\t\t\t<option value=\"date\">Sort by newness</option>\n"
+                },
+                {
+                    "date": 1662898464080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \t\t\t\t\t\t\t\t\t<option value=\"price-desc\">Sort by price: high to low</option>\n \t\t\t\t\t\t\t\t</select>\n \t\t\t\t\t\t\t</div>\n \n-\t\t\t\t\t\t\t<div class=\"sort-item product-per-page\">\n+\t\t\t\t\t\t\t<div class=\"sort-item product-per-page\" wir>\n \t\t\t\t\t\t\t\t<select name=\"post-per-page\" class=\"use-chosen\" >\n \t\t\t\t\t\t\t\t\t<option value=\"12\" selected=\"selected\">12 per page</option>\n \t\t\t\t\t\t\t\t\t<option value=\"16\">16 per page</option>\n \t\t\t\t\t\t\t\t\t<option value=\"18\">18 per page</option>\n"
+                },
+                {
+                    "date": 1662898469404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \t\t\t\t\t\t\t\t\t<option value=\"price-desc\">Sort by price: high to low</option>\n \t\t\t\t\t\t\t\t</select>\n \t\t\t\t\t\t\t</div>\n \n-\t\t\t\t\t\t\t<div class=\"sort-item product-per-page\" wir>\n+\t\t\t\t\t\t\t<div class=\"sort-item product-per-page\" wire:model=\"\">\n \t\t\t\t\t\t\t\t<select name=\"post-per-page\" class=\"use-chosen\" >\n \t\t\t\t\t\t\t\t\t<option value=\"12\" selected=\"selected\">12 per page</option>\n \t\t\t\t\t\t\t\t\t<option value=\"16\">16 per page</option>\n \t\t\t\t\t\t\t\t\t<option value=\"18\">18 per page</option>\n"
+                },
+                {
+                    "date": 1662898481921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \t\t\t\t\t\t\t\t\t<option value=\"price-desc\">Sort by price: high to low</option>\n \t\t\t\t\t\t\t\t</select>\n \t\t\t\t\t\t\t</div>\n \n-\t\t\t\t\t\t\t<div class=\"sort-item product-per-page\" wire:model=\"\">\n+\t\t\t\t\t\t\t<div class=\"sort-item product-per-page\" wire:model=\"page\">\n \t\t\t\t\t\t\t\t<select name=\"post-per-page\" class=\"use-chosen\" >\n \t\t\t\t\t\t\t\t\t<option value=\"12\" selected=\"selected\">12 per page</option>\n \t\t\t\t\t\t\t\t\t<option value=\"16\">16 per page</option>\n \t\t\t\t\t\t\t\t\t<option value=\"18\">18 per page</option>\n"
+                },
+                {
+                    "date": 1662898490193,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n \t\t\t\t\t\t\t\t\t<option value=\"price-desc\">Sort by price: high to low</option>\n \t\t\t\t\t\t\t\t</select>\n \t\t\t\t\t\t\t</div>\n \n-\t\t\t\t\t\t\t<div class=\"sort-item product-per-page\" wire:model=\"page\">\n+\t\t\t\t\t\t\t<div class=\"sort-item product-per-page\" wire:model=\"pagesize\">\n \t\t\t\t\t\t\t\t<select name=\"post-per-page\" class=\"use-chosen\" >\n \t\t\t\t\t\t\t\t\t<option value=\"12\" selected=\"selected\">12 per page</option>\n \t\t\t\t\t\t\t\t\t<option value=\"16\">16 per page</option>\n \t\t\t\t\t\t\t\t\t<option value=\"18\">18 per page</option>\n"
+                },
+                {
+                    "date": 1662898552943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n \t\t\t\t\t\t<div class=\"wrap-right\">\n \n \t\t\t\t\t\t\t<div class=\"sort-item orderby \">\n \t\t\t\t\t\t\t\t<select name=\"orderby\" class=\"use-chosen\" wire:model=\"sorting\">\n-\t\t\t\t\t\t\t\t\t<option value=\"menu_order\" selected=\"selected\">Default sorting</option>\n+\t\t\t\t\t\t\t\t\t<option value=\"\" selected=\"selected\">Default sorting</option>\n \t\t\t\t\t\t\t\t\t<option value=\"popularity\">Sort by popularity</option>\n \t\t\t\t\t\t\t\t\t<option value=\"rating\">Sort by average rating</option>\n \t\t\t\t\t\t\t\t\t<option value=\"date\">Sort by newness</option>\n \t\t\t\t\t\t\t\t\t<option value=\"price\">Sort by price: low to high</option>\n"
+                },
+                {
+                    "date": 1662898567572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,11 +26,9 @@\n \t\t\t\t\t\t<div class=\"wrap-right\">\n \n \t\t\t\t\t\t\t<div class=\"sort-item orderby \">\n \t\t\t\t\t\t\t\t<select name=\"orderby\" class=\"use-chosen\" wire:model=\"sorting\">\n-\t\t\t\t\t\t\t\t\t<option value=\"\" selected=\"selected\">Default sorting</option>\n-\t\t\t\t\t\t\t\t\t<option value=\"popularity\">Sort by popularity</option>\n-\t\t\t\t\t\t\t\t\t<option value=\"rating\">Sort by average rating</option>\n+\t\t\t\t\t\t\t\t\t<option value=\"default\" selected=\"selected\">Default sorting</option>\n \t\t\t\t\t\t\t\t\t<option value=\"date\">Sort by newness</option>\n \t\t\t\t\t\t\t\t\t<option value=\"price\">Sort by price: low to high</option>\n \t\t\t\t\t\t\t\t\t<option value=\"price-desc\">Sort by price: high to low</option>\n \t\t\t\t\t\t\t\t</select>\n"
+                },
+                {
+                    "date": 1662902778567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\t<!--main area-->\n \t<main id=\"main\" class=\"main-site left-sidebar\">\n \n \t\t<div class=\"container\">\n \n"
                 }
             ],
             "date": 1662564917571,
