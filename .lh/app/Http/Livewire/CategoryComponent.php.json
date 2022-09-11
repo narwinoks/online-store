@@ -1,0 +1,130 @@
+{
+    "sourceFile": "app/Http/Livewire/CategoryComponent.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 28,
+            "patches": [
+                {
+                    "date": 1662903591206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662903610029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n use Livewire\\WithPagination;\n // use Cart;\n use Gloudemans\\Shoppingcart\\Facades\\Cart;\n // use Gloudemans\\Shoppingcart\\Facades\\Cart;\n-class ShopComponent extends Component\n+class Catego extends Component\n {\n     public $sorting;\n     public  $pagesize;\n     public function mount()\n"
+                },
+                {
+                    "date": 1662903615431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n use Livewire\\WithPagination;\n // use Cart;\n use Gloudemans\\Shoppingcart\\Facades\\Cart;\n // use Gloudemans\\Shoppingcart\\Facades\\Cart;\n-class Catego extends Component\n+class CategoryComponent extends Component\n {\n     public $sorting;\n     public  $pagesize;\n     public function mount()\n"
+                },
+                {
+                    "date": 1662903626470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n             $products = Product::paginate($this->pagesize);\n         }\n         $catgeories = Category::all();\n \n-        return view('livewire.shop-component', [\n+        return view('livewire.category-component', [\n             'products' => $products,\n             'categories' => $catgeories\n         ])->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1662903669731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n class CategoryComponent extends Component\n {\n     public $sorting;\n     public  $pagesize;\n+    \n     public function mount()\n     {\n         $this->sorting = \"defult\";\n         $this->pagesize = 12;\n"
+                },
+                {
+                    "date": 1662903675569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n class CategoryComponent extends Component\n {\n     public $sorting;\n     public  $pagesize;\n-    \n+    public $category;\n     public function mount()\n     {\n         $this->sorting = \"defult\";\n         $this->pagesize = 12;\n"
+                },
+                {
+                    "date": 1662903685499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,13 +12,14 @@\n class CategoryComponent extends Component\n {\n     public $sorting;\n     public  $pagesize;\n-    public $category;\n+    public $category_slug;\n     public function mount()\n     {\n         $this->sorting = \"defult\";\n         $this->pagesize = 12;\n+        $this\n     }\n     public function store($product_id, $product_name, $product_price)\n     {\n         Cart::add($product_id, $product_name, 1, $product_price)->associate('App\\Models\\Product');\n"
+                },
+                {
+                    "date": 1662903691095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     public function mount()\n     {\n         $this->sorting = \"defult\";\n         $this->pagesize = 12;\n-        $this\n+        $this->category_slug =''\n     }\n     public function store($product_id, $product_name, $product_price)\n     {\n         Cart::add($product_id, $product_name, 1, $product_price)->associate('App\\Models\\Product');\n"
+                },
+                {
+                    "date": 1662903706872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,13 @@\n {\n     public $sorting;\n     public  $pagesize;\n     public $category_slug;\n-    public function mount()\n+    public function mount($category_slug)\n     {\n         $this->sorting = \"defult\";\n         $this->pagesize = 12;\n-        $this->category_slug =''\n+        $this->category_slug ='';\n     }\n     public function store($product_id, $product_name, $product_price)\n     {\n         Cart::add($product_id, $product_name, 1, $product_price)->associate('App\\Models\\Product');\n"
+                },
+                {
+                    "date": 1662903720628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     public function mount($category_slug)\n     {\n         $this->sorting = \"defult\";\n         $this->pagesize = 12;\n-        $this->category_slug ='';\n+        $this->category_slug =$category_slug;\n     }\n     public function store($product_id, $product_name, $product_price)\n     {\n         Cart::add($product_id, $product_name, 1, $product_price)->associate('App\\Models\\Product');\n@@ -27,8 +27,9 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n+        \n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903726532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n-        \n+        $category_slug=categ\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903732649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n-        $category_slug=categ\n+        $category_slug=Category\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903738335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n-        $category_slug=Category\n+        $category_slug=Category::where\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903744152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n-        $category_slug=Category::where\n+        $category_slug=Category::where('sl')\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903752956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n-        $category_slug=Category::where('sl')\n+        $category_slug=Category::where('slug'=>$this->slug);\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903761080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n-        $category_slug=Category::where('slug'=>$this->slug);\n+        $category_slug=Category::where('slug',$this->slug);\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903767721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n-        $category_slug=Category::where('slug',$this->slug);\n+        $category_slug=Category::where('slug',$this->slug)->;\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903772953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,10 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n-        $category_slug=Category::where('slug',$this->slug)->;\n+        $category_slug=Category::where('slug',$this->slug)->first();\n+        \n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903781393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     }\n     public function render()\n     {\n         $category_slug=Category::where('slug',$this->slug)->first();\n-        \n+        $category_id=\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903795253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     }\n     public function render()\n     {\n         $category_slug=Category::where('slug',$this->slug)->first();\n-        $category_id=\n+        $category_id=$category_id;\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903804190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,9 @@\n     public function render()\n     {\n         $category_slug=Category::where('slug',$this->slug)->first();\n         $category_id=$category_id;\n+        $category_=$category_id;\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903810688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,11 +27,11 @@\n         return redirect()->route('product.cart');\n     }\n     public function render()\n     {\n-        $category_slug=Category::where('slug',$this->slug)->first();\n+        $category=Category::where('slug',$this->slug)->first();\n         $category_id=$category_id;\n-        $category_=$category_id;\n+        $category_name=$category_id;\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903816890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n     }\n     public function render()\n     {\n         $category=Category::where('slug',$this->slug)->first();\n-        $category_id=$category_id;\n+        $category_id=$category->id;\n         $category_name=$category_id;\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n"
+                },
+                {
+                    "date": 1662903822629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n     public function render()\n     {\n         $category=Category::where('slug',$this->slug)->first();\n         $category_id=$category->id;\n-        $category_name=$category_id;\n+        $category_name=$category->name;\n         if ($this->sorting == \"date\") {\n             $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903845246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         $category=Category::where('slug',$this->slug)->first();\n         $category_id=$category->id;\n         $category_name=$category->name;\n         if ($this->sorting == \"date\") {\n-            $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n+            $products = Product::where orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n         } elseif ($this->sorting == \"price-desc\") {\n             $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903852959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n         $category=Category::where('slug',$this->slug)->first();\n         $category_id=$category->id;\n         $category_name=$category->name;\n         if ($this->sorting == \"date\") {\n-            $products = Product::where orderBy('created_at', 'DESC')->paginate($this->pagesize);\n+            $products = Product::where('category_id',$category_id)->orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n             $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n         } elseif ($this->sorting == \"price-desc\") {\n             $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903861121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         $category_name=$category->name;\n         if ($this->sorting == \"date\") {\n             $products = Product::where('category_id',$category_id)->orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n-            $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n+            $products = Product:: orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n         } elseif ($this->sorting == \"price-desc\") {\n             $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);\n         } else {\n             $products = Product::paginate($this->pagesize);\n"
+                },
+                {
+                    "date": 1662903867124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,11 +33,11 @@\n         $category_name=$category->name;\n         if ($this->sorting == \"date\") {\n             $products = Product::where('category_id',$category_id)->orderBy('created_at', 'DESC')->paginate($this->pagesize);\n         } else if ($this->sorting == \"price\") {\n-            $products = Product:: orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n+            $products = Product::where('category_id', $category_id)-> orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n         } elseif ($this->sorting == \"price-desc\") {\n-            $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);\n+            $products = Product::where('category_id', $category_id)-> orderBy('regular_price', 'DESC')->paginate($this->pagesize);\n         } else {\n             $products = Product::paginate($this->pagesize);\n         }\n         $catgeories = Category::all();\n"
+                },
+                {
+                    "date": 1662903908097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,8 +44,8 @@\n \n         return view('livewire.category-component', [\n             'products' => $products,\n             'categories' => $catgeories,\n-            \n+            ''\n         ])->layout('Layouts.base');\n     }\n }\n"
+                }
+            ],
+            "date": 1662903591206,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Livewire;\n\nuse App\\Models\\Category;\nuse App\\Models\\Product;\nuse Livewire\\Component;\nuse Livewire\\WithPagination;\n// use Cart;\nuse Gloudemans\\Shoppingcart\\Facades\\Cart;\n// use Gloudemans\\Shoppingcart\\Facades\\Cart;\nclass ShopComponent extends Component\n{\n    public $sorting;\n    public  $pagesize;\n    public function mount()\n    {\n        $this->sorting = \"defult\";\n        $this->pagesize = 12;\n    }\n    public function store($product_id, $product_name, $product_price)\n    {\n        Cart::add($product_id, $product_name, 1, $product_price)->associate('App\\Models\\Product');\n        session()->flash('success_message', 'Item Added successfully');\n        return redirect()->route('product.cart');\n    }\n    public function render()\n    {\n        if ($this->sorting == \"date\") {\n            $products = Product::orderBy('created_at', 'DESC')->paginate($this->pagesize);\n        } else if ($this->sorting == \"price\") {\n            $products = Product::orderBy('regular_price', 'ASC')->paginate($this->pagesize);\n        } elseif ($this->sorting == \"price-desc\") {\n            $products = Product::orderBy('regular_price', 'DESC')->paginate($this->pagesize);\n        } else {\n            $products = Product::paginate($this->pagesize);\n        }\n        $catgeories = Category::all();\n\n        return view('livewire.shop-component', [\n            'products' => $products,\n            'categories' => $catgeories\n        ])->layout('Layouts.base');\n    }\n}\n"
+        }
+    ]
+}

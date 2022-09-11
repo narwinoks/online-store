@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CartComponent;
+use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\DetailsComponents;
 use App\Http\Livewire\HomeComponent;
@@ -28,7 +29,7 @@ Route::get('/shop',ShopComponent::class);
 Route::get('/cart',CartComponent::class)->name('product.cart');
 Route::get('/checkout',CheckoutComponent::class);
 Route::get('/product/{slug}',DetailsComponents::class)->name('product.details');
-
+Route::get('/product-category/{category_slug}',CategoryComponent::class)->name('product.category');
 // Route::middleware([
 //     'auth:sanctum',
 //     config('jetstream.auth_session'),

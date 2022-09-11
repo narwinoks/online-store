@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 89,
+            "activePatchIndex": 94,
             "patches": [
                 {
                     "date": 1662564917571,
@@ -364,6 +364,26 @@
                 {
                     "date": 1662902778567,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-\t<!--main area-->\n \t<main id=\"main\" class=\"main-site left-sidebar\">\n \n \t\t<div class=\"container\">\n \n"
+                },
+                {
+                    "date": 1662903212006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,42 +91,10 @@\n \t\t\t\t\t<div class=\"widget mercado-widget categories-widget\">\n \t\t\t\t\t\t<h2 class=\"widget-title\">All Categories</h2>\n \t\t\t\t\t\t<div class=\"widget-content\">\n \t\t\t\t\t\t\t<ul class=\"list-category\">\n-\t\t\t\t\t\t\t\t<li class=\"category-item has-child-cate\">\n-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Fashion & Accessories</a>\n-\t\t\t\t\t\t\t\t\t<span class=\"toggle-control\">+</span>\n-\t\t\t\t\t\t\t\t\t<ul class=\"sub-cate\">\n-\t\t\t\t\t\t\t\t\t\t<li class=\"category-item\"><a href=\"#\" class=\"cate-link\">Batteries (22)</a></li>\n-\t\t\t\t\t\t\t\t\t\t<li class=\"category-item\"><a href=\"#\" class=\"cate-link\">Headsets (16)</a></li>\n-\t\t\t\t\t\t\t\t\t\t<li class=\"category-item\"><a href=\"#\" class=\"cate-link\">Screen (28)</a></li>\n-\t\t\t\t\t\t\t\t\t</ul>\n-\t\t\t\t\t\t\t\t</li>\n-\t\t\t\t\t\t\t\t<li class=\"category-item has-child-cate\">\n-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Furnitures & Home Decors</a>\n-\t\t\t\t\t\t\t\t\t<span class=\"toggle-control\">+</span>\n-\t\t\t\t\t\t\t\t\t<ul class=\"sub-cate\">\n-\t\t\t\t\t\t\t\t\t\t<li class=\"category-item\"><a href=\"#\" class=\"cate-link\">Batteries (22)</a></li>\n-\t\t\t\t\t\t\t\t\t\t<li class=\"category-item\"><a href=\"#\" class=\"cate-link\">Headsets (16)</a></li>\n-\t\t\t\t\t\t\t\t\t\t<li class=\"category-item\"><a href=\"#\" class=\"cate-link\">Screen (28)</a></li>\n-\t\t\t\t\t\t\t\t\t</ul>\n-\t\t\t\t\t\t\t\t</li>\n-\t\t\t\t\t\t\t\t<li class=\"category-item has-child-cate\">\n-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Digital & Electronics</a>\n-\t\t\t\t\t\t\t\t\t<span class=\"toggle-control\">+</span>\n-\t\t\t\t\t\t\t\t\t<ul class=\"sub-cate\">\n-\t\t\t\t\t\t\t\t\t\t<li class=\"category-item\"><a href=\"#\" class=\"cate-link\">Batteries (22)</a></li>\n-\t\t\t\t\t\t\t\t\t\t<li class=\"category-item\"><a href=\"#\" class=\"cate-link\">Headsets (16)</a></li>\n-\t\t\t\t\t\t\t\t\t\t<li class=\"category-item\"><a href=\"#\" class=\"cate-link\">Screen (28)</a></li>\n-\t\t\t\t\t\t\t\t\t</ul>\n-\t\t\t\t\t\t\t\t</li>\n+\t\t\t\t\t\t\t\t\n \t\t\t\t\t\t\t\t<li class=\"category-item\">\n-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Tools & Equipments</a>\n-\t\t\t\t\t\t\t\t</li>\n-\t\t\t\t\t\t\t\t<li class=\"category-item\">\n-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Kid’s Toys</a>\n-\t\t\t\t\t\t\t\t</li>\n-\t\t\t\t\t\t\t\t<li class=\"category-item\">\n \t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Organics & Spa</a>\n \t\t\t\t\t\t\t\t</li>\n \t\t\t\t\t\t\t</ul>\n \t\t\t\t\t\t</div>\n@@ -261,6 +229,5 @@\n \t\t\t</div><!--end row-->\n \n \t\t</div><!--end container-->\n \n-\t</main>\n-\t<!--main area-->\n\\ No newline at end of file\n+\t</main>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662903219874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,11 @@\n \t\t\t\t\t<div class=\"widget mercado-widget categories-widget\">\n \t\t\t\t\t\t<h2 class=\"widget-title\">All Categories</h2>\n \t\t\t\t\t\t<div class=\"widget-content\">\n \t\t\t\t\t\t\t<ul class=\"list-category\">\n-\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t@foreach ($catgeories as )\n+\t\t\t\t\t\t\t\t\t\n+\t\t\t\t\t\t\t\t@endforeach\n \t\t\t\t\t\t\t\t<li class=\"category-item\">\n \t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Organics & Spa</a>\n \t\t\t\t\t\t\t\t</li>\n \t\t\t\t\t\t\t</ul>\n"
+                },
+                {
+                    "date": 1662903225190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,9 @@\n \t\t\t\t\t<div class=\"widget mercado-widget categories-widget\">\n \t\t\t\t\t\t<h2 class=\"widget-title\">All Categories</h2>\n \t\t\t\t\t\t<div class=\"widget-content\">\n \t\t\t\t\t\t\t<ul class=\"list-category\">\n-\t\t\t\t\t\t\t\t@foreach ($catgeories as )\n+\t\t\t\t\t\t\t\t@foreach ($catgeories as $category)\n \t\t\t\t\t\t\t\t\t\n \t\t\t\t\t\t\t\t@endforeach\n \t\t\t\t\t\t\t\t<li class=\"category-item\">\n \t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Organics & Spa</a>\n"
+                },
+                {
+                    "date": 1662903231182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,13 +92,13 @@\n \t\t\t\t\t\t<h2 class=\"widget-title\">All Categories</h2>\n \t\t\t\t\t\t<div class=\"widget-content\">\n \t\t\t\t\t\t\t<ul class=\"list-category\">\n \t\t\t\t\t\t\t\t@foreach ($catgeories as $category)\n+\t\t\t\t\t\t\t\t\t<li class=\"category-item\">\n+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Organics & Spa</a>\n+\t\t\t\t\t\t\t\t\t</li>\n \t\t\t\t\t\t\t\t\t\n \t\t\t\t\t\t\t\t@endforeach\n-\t\t\t\t\t\t\t\t<li class=\"category-item\">\n-\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">Organics & Spa</a>\n-\t\t\t\t\t\t\t\t</li>\n \t\t\t\t\t\t\t</ul>\n \t\t\t\t\t\t</div>\n \t\t\t\t\t</div><!-- Categories widget-->\n \n"
+                },
+                {
+                    "date": 1662903248350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n \t\t\t\t\t\t<div class=\"widget-content\">\n \t\t\t\t\t\t\t<ul class=\"list-category\">\n \t\t\t\t\t\t\t\t@foreach ($catgeories as $category)\n \t\t\t\t\t\t\t\t\t<li class=\"category-item\">\n-\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">{{  }}</a>\n+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"cate-link\">{{ $ }}</a>\n \t\t\t\t\t\t\t\t\t</li>\n \t\t\t\t\t\t\t\t@endforeach\n \t\t\t\t\t\t\t</ul>\n \t\t\t\t\t\t</div>\n"
                 }
             ],
             "date": 1662564917571,
