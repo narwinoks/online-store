@@ -3,11 +3,47 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1662564797623,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662869848453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n namespace App\\Http\\Livewire;\n \n use Livewire\\Component;\n+use Livewire\\\n \n class ShopComponent extends Component\n {\n     public function render()\n"
+                },
+                {
+                    "date": 1662869853645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n namespace App\\Http\\Livewire;\n \n use Livewire\\Component;\n-use Livewire\\\n+use Livewire\\WithPagination\n \n class ShopComponent extends Component\n {\n     public function render()\n"
+                },
+                {
+                    "date": 1662869860035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,14 @@\n \n namespace App\\Http\\Livewire;\n \n use Livewire\\Component;\n-use Livewire\\WithPagination\n+use Livewire\\WithPagination;\n \n class ShopComponent extends Component\n {\n     public function render()\n     {\n+        $pro\n         return view('livewire.shop-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1662869866598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,16 @@\n <?php\n \n namespace App\\Http\\Livewire;\n \n+use App\\Models\\Product;\n use Livewire\\Component;\n use Livewire\\WithPagination;\n \n class ShopComponent extends Component\n {\n     public function render()\n     {\n-        $pro\n+        $product=Product::\n         return view('livewire.shop-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1662869872172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n class ShopComponent extends Component\n {\n     public function render()\n     {\n-        $product=Product::\n+        $product=Product::paginate\n         return view('livewire.shop-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1662869882428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n class ShopComponent extends Component\n {\n     public function render()\n     {\n-        $product=Product::paginate\n+        $product=Product::paginate(12);\n         return view('livewire.shop-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1662869889924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,10 @@\n {\n     public function render()\n     {\n         $product=Product::paginate(12);\n-        return view('livewire.shop-component')->layout('Layouts.base');\n+        return view('livewire.shop-component',\n+        [\n+            \n+        ])->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1662869900462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,9 @@\n {\n     public function render()\n     {\n         $product=Product::paginate(12);\n-        return view('livewire.shop-component',\n-        [\n-            \n+        return view('livewire.shop-component',[\n+\n         ])->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1662869908932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n class ShopComponent extends Component\n {\n     public function render()\n     {\n-        $product=Product::paginate(12);\n+        $products=Product::paginate(12);\n         return view('livewire.shop-component',[\n-\n+            'product'\n         ])->layout('Layouts.base');\n     }\n }\n"
                 }
             ],
             "date": 1662564797623,

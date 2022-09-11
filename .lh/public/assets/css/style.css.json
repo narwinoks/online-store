@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 30,
             "patches": [
                 {
                     "date": 1662820273132,
@@ -16,6 +16,118 @@
                 {
                     "date": 1662820293694,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7158,5 +7158,7 @@\n \tmargin-bottom: 65px;\r\n \tpadding-left: 40px;\r\n }\r\n \r\n-.text-red-600\n\\ No newline at end of file\n+.text-red-600{\r\n+    color: red;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871024675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7160,5 +7160,5 @@\n }\r\n \r\n .text-red-600{\r\n     color: red;\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1662871044623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7161,4 +7161,5 @@\n \r\n .text-red-600{\r\n     color: red;\r\n }\r\n+\r\n"
+                },
+                {
+                    "date": 1662871054548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7162,4 +7162,5 @@\n .text-red-600{\r\n     color: red;\r\n }\r\n \r\n+.pl\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871061209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7162,5 +7162,5 @@\n .text-red-600{\r\n     color: red;\r\n }\r\n \r\n-.pl\n\\ No newline at end of file\n+.pl-4,.px-4\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871067905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7162,5 +7162,7 @@\n .text-red-600{\r\n     color: red;\r\n }\r\n \r\n-.pl-4,.px-4\n\\ No newline at end of file\n+.pl-4,.px-4{\r\n+    padding-left: 1.;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871074388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7163,6 +7163,6 @@\n     color: red;\r\n }\r\n \r\n .pl-4,.px-4{\r\n-    padding-left: 1.;\r\n+    padding-left: 1.5rem ;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871080878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7163,6 +7163,6 @@\n     color: red;\r\n }\r\n \r\n .pl-4,.px-4{\r\n-    padding-left: 1.5rem ;\r\n-}\n\\ No newline at end of file\n+    padding-left: 1.5rem !important;\r\n+}\r\n"
+                },
+                {
+                    "date": 1662871087543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7165,4 +7165,5 @@\n \r\n .pl-4,.px-4{\r\n     padding-left: 1.5rem !important;\r\n }\r\n+.pb,.p\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871094662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7165,5 +7165,7 @@\n \r\n .pl-4,.px-4{\r\n     padding-left: 1.5rem !important;\r\n }\r\n-.pb,.p\n\\ No newline at end of file\n+.pb,.py-2{\r\n+    padi\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871104732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7166,6 +7166,6 @@\n .pl-4,.px-4{\r\n     padding-left: 1.5rem !important;\r\n }\r\n .pb,.py-2{\r\n-    padi\r\n+    padding-bottom: 5rem !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871109988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7167,5 +7167,6 @@\n     padding-left: 1.5rem !important;\r\n }\r\n .pb,.py-2{\r\n     padding-bottom: 5rem !important;\r\n-}\n\\ No newline at end of file\n+}\r\n+.pt\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871116764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7168,5 +7168,5 @@\n }\r\n .pb,.py-2{\r\n     padding-bottom: 5rem !important;\r\n }\r\n-.pt\n\\ No newline at end of file\n+.pt-2,\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871122055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7168,5 +7168,5 @@\n }\r\n .pb,.py-2{\r\n     padding-bottom: 5rem !important;\r\n }\r\n-.pt-2,\n\\ No newline at end of file\n+.pt-2,py\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871128807,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7168,5 +7168,7 @@\n }\r\n .pb,.py-2{\r\n     padding-bottom: 5rem !important;\r\n }\r\n-.pt-2,py\n\\ No newline at end of file\n+.pt-2,.py-2{\r\n+    paddin\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871136062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7169,6 +7169,6 @@\n .pb,.py-2{\r\n     padding-bottom: 5rem !important;\r\n }\r\n .pt-2,.py-2{\r\n-    paddin\r\n+    padding-top: .5rem;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871142370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7166,9 +7166,9 @@\n .pl-4,.px-4{\r\n     padding-left: 1.5rem !important;\r\n }\r\n .pb,.py-2{\r\n-    padding-bottom: 5rem !important;\r\n+    padding-bottom: .5rem !important;\r\n }\r\n .pt-2,.py-2{\r\n-    padding-top: .5rem;\r\n+    padding-top: .5rem !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871147669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7170,5 +7170,5 @@\n     padding-bottom: .5rem !important;\r\n }\r\n .pt-2,.py-2{\r\n     padding-top: .5rem !important;\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1662871155044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7171,4 +7171,5 @@\n }\r\n .pt-2,.py-2{\r\n     padding-top: .5rem !important;\r\n }\r\n+.bg-white\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871161350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7171,5 +7171,7 @@\n }\r\n .pt-2,.py-2{\r\n     padding-top: .5rem !important;\r\n }\r\n-.bg-white\n\\ No newline at end of file\n+.bg-white{\r\n+    back\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871166987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7172,6 +7172,6 @@\n .pt-2,.py-2{\r\n     padding-top: .5rem !important;\r\n }\r\n .bg-white{\r\n-    back\r\n+    background-color: #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871172557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7172,6 +7172,6 @@\n .pt-2,.py-2{\r\n     padding-top: .5rem !important;\r\n }\r\n .bg-white{\r\n-    background-color: #fff;\r\n+    background-color: #fff !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871177934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7173,5 +7173,6 @@\n     padding-top: .5rem !important;\r\n }\r\n .bg-white{\r\n     background-color: #fff !important;\r\n-}\n\\ No newline at end of file\n+}\r\n+.border\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871185834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7174,5 +7174,7 @@\n }\r\n .bg-white{\r\n     background-color: #fff !important;\r\n }\r\n-.border\n\\ No newline at end of file\n+.border{\r\n+    border: 1px ;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871192130,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7175,6 +7175,6 @@\n .bg-white{\r\n     background-color: #fff !important;\r\n }\r\n .border{\r\n-    border: 1px ;\r\n+    border: 1px solid #dee;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871198773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7175,6 +7175,6 @@\n .bg-white{\r\n     background-color: #fff !important;\r\n }\r\n .border{\r\n-    border: 1px solid #dee;\r\n+    border: 1px solid #dee2e6 !important;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871206660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7176,5 +7176,6 @@\n     background-color: #fff !important;\r\n }\r\n .border{\r\n     border: 1px solid #dee2e6 !important;\r\n-}\n\\ No newline at end of file\n+}\r\n+.bg-white\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871214663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7177,5 +7177,7 @@\n }\r\n .border{\r\n     border: 1px solid #dee2e6 !important;\r\n }\r\n-.bg-white\n\\ No newline at end of file\n+.bg-white{\r\n+    background-color: #fff;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1662871235410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7180,5 +7180,5 @@\n }\r\n .bg-white{\r\n     background-color: #fff !important;\r\n }\r\n-.va\n\\ No newline at end of file\n+.v\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1662820273132,

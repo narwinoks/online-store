@@ -1,0 +1,74 @@
+{
+    "sourceFile": "database/factories/CategoryFactory.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1662868040935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662868051226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n      */\n     public function definition()\n     {\n         return [\n-            'name'\n+            'name'=>$this->fake\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1662868105989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n      */\n     public function definition()\n     {\n         return [\n-            'name'=>$this->fake\n+            'name'=>$this->faker->word(2)\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1662868111480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n      */\n     public function definition()\n     {\n         return [\n-            'name'=>$this->faker->word(2)\n+            'name'=>$this->faker->word(2),\n+            'slug'\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1662868117038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n     public function definition()\n     {\n         return [\n             'name'=>$this->faker->word(2),\n-            'slug'\n+            'slug'=>Str::title($value)\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1662868139218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,11 @@\n      * @return array\n      */\n     public function definition()\n     {\n+        $category_nmae=\n         return [\n             'name'=>$this->faker->word(2),\n-            'slug'=>Str::title($value)\n+            'slug'=>Str::title()\n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1662868144485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return array\n      */\n     public function definition()\n     {\n-        $category_nmae=\n+        $category_nmae=$this->faker\n         return [\n             'name'=>$this->faker->word(2),\n             'slug'=>Str::title()\n         ];\n"
+                },
+                {
+                    "date": 1662868149723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return array\n      */\n     public function definition()\n     {\n-        $category_nmae=$this->faker\n+        $category_nmae=$this->faker->words()\n         return [\n             'name'=>$this->faker->word(2),\n             'slug'=>Str::title()\n         ];\n"
+                },
+                {
+                    "date": 1662868156370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return array\n      */\n     public function definition()\n     {\n-        $category_nmae=$this->faker->words()\n+        $category_nmae=$this->faker->words($mb=2,)\n         return [\n             'name'=>$this->faker->word(2),\n             'slug'=>Str::title()\n         ];\n"
+                },
+                {
+                    "date": 1662868162071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return array\n      */\n     public function definition()\n     {\n-        $category_nmae=$this->faker->words($mb=2,)\n+        $category_nmae=$this->faker->words($mb=2,$asText)\n         return [\n             'name'=>$this->faker->word(2),\n             'slug'=>Str::title()\n         ];\n"
+                },
+                {
+                    "date": 1662868191860,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,10 @@\n      * @return array\n      */\n     public function definition()\n     {\n-        $category_nmae=$this->faker->words($mb=2,$asText)\n+        $category_nmae=$this->faker->words($mb=2,$asText=true);\n+        $slug=\n         return [\n             'name'=>$this->faker->word(2),\n             'slug'=>Str::title()\n         ];\n"
+                },
+                {
+                    "date": 1662868200081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n      */\n     public function definition()\n     {\n         $category_nmae=$this->faker->words($mb=2,$asText=true);\n-        $slug=\n+        $slug=Str::slug($category_nmae);\n         return [\n             'name'=>$this->faker->word(2),\n             'slug'=>Str::title()\n         ];\n"
+                },
+                {
+                    "date": 1662868205894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return array\n      */\n     public function definition()\n     {\n-        $category_nmae=$this->faker->words($mb=2,$asText=true);\n+        $category_name=$this->faker->words($mb=2,$asText=true);\n         $slug=Str::slug($category_nmae);\n         return [\n             'name'=>$this->faker->word(2),\n             'slug'=>Str::title()\n"
+                },
+                {
+                    "date": 1662868211871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n      */\n     public function definition()\n     {\n         $category_name=$this->faker->words($mb=2,$asText=true);\n-        $slug=Str::slug($category_nmae);\n+        $slug=Str::slug($category_name);\n         return [\n             'name'=>$this->faker->word(2),\n             'slug'=>Str::title()\n         ];\n"
+                },
+                {
+                    "date": 1662868217497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     {\n         $category_name=$this->faker->words($mb=2,$asText=true);\n         $slug=Str::slug($category_name);\n         return [\n-            'name'=>$\n+            'name'=>$c\n             'slug'=>Str::title()\n         ];\n     }\n }\n"
+                }
+            ],
+            "date": 1662868040935,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace Database\\Factories;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\Factory;\n\nclass CategoryFactory extends Factory\n{\n    /**\n     * Define the model's default state.\n     *\n     * @return array\n     */\n    public function definition()\n    {\n        return [\n            'name'\n        ];\n    }\n}\n"
+        }
+    ]
+}

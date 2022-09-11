@@ -1,0 +1,238 @@
+{
+    "sourceFile": "database/migrations/2022_09_11_021403_create_products_table.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 55,
+            "patches": [
+                {
+                    "date": 1662862629759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662862639614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     public function up()\n     {\n         Schema::create('products', function (Blueprint $table) {\n             $table->id();\n-            $table\n+            $table->string('nmae')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862645370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n     public function up()\n     {\n         Schema::create('products', function (Blueprint $table) {\n             $table->id();\n-            $table->string('nmae')\n+            $table->string('nmae');\n+            $table\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862653029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     {\n         Schema::create('products', function (Blueprint $table) {\n             $table->id();\n             $table->string('nmae');\n-            $table\n+            $table->string('slug')-;\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862658675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n     {\n         Schema::create('products', function (Blueprint $table) {\n             $table->id();\n             $table->string('nmae');\n-            $table->string('slug')-;\n+            $table->string('slug')->unique();\n+            \n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862667693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         Schema::create('products', function (Blueprint $table) {\n             $table->id();\n             $table->string('nmae');\n             $table->string('slug')->unique();\n-            \n+            $table->string('\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862673792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         Schema::create('products', function (Blueprint $table) {\n             $table->id();\n             $table->string('nmae');\n             $table->string('slug')->unique();\n-            $table->string('\n+            $table->string('short\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862682714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n         Schema::create('products', function (Blueprint $table) {\n             $table->id();\n             $table->string('nmae');\n             $table->string('slug')->unique();\n-            $table->string('short\n+            $table->string('short_description');\n+            \n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862692447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,10 +16,10 @@\n         Schema::create('products', function (Blueprint $table) {\n             $table->id();\n             $table->string('nmae');\n             $table->string('slug')->unique();\n-            $table->string('short_description');\n-            \n+            $table->string('short_description')->nullable();\n+            $table->string('description')->nullable();\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862699773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n             $table->id();\n             $table->string('nmae');\n             $table->string('slug')->unique();\n             $table->string('short_description')->nullable();\n-            $table->string('description')->nullable();\n+            $table->string('description');\n+            $table-\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862705298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             $table->string('nmae');\n             $table->string('slug')->unique();\n             $table->string('short_description')->nullable();\n             $table->string('description');\n-            $table-\n+            $table->decimal('re')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862711180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             $table->string('nmae');\n             $table->string('slug')->unique();\n             $table->string('short_description')->nullable();\n             $table->string('description');\n-            $table->decimal('re')\n+            $table->decimal('regular_proce')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862717930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             $table->string('nmae');\n             $table->string('slug')->unique();\n             $table->string('short_description')->nullable();\n             $table->string('description');\n-            $table->decimal('regular_proce')\n+            $table->decimal('regular_price';)\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862766367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,11 @@\n             $table->string('nmae');\n             $table->string('slug')->unique();\n             $table->string('short_description')->nullable();\n             $table->string('description');\n-            $table->decimal('regular_price';)\n+            $table->decimal('regular_price');\n+            $table->decimal('regular_price');\n+\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862780304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n             $table->string('slug')->unique();\n             $table->string('short_description')->nullable();\n             $table->string('description');\n             $table->decimal('regular_price');\n-            $table->decimal('regular_price');\n-\n+            $table->decimal('sale_price');\n+            $table->string('\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862787482,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             $table->string('short_description')->nullable();\n             $table->string('description');\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n-            $table->string('\n+            $table->string('SKU');\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862797885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n             $table->string('description');\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n+            $table->enum()\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862807532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('description');\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n-            $table->enum()\n+            $table->enum('stock_status')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862815999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('description');\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n-            $table->enum('stock_status')\n+            $table->enum('stock_status',['ins'])\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862825156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('description');\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n-            $table->enum('stock_status',['ins'])\n+            $table->enum('stock_status',['instock','au'])\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862831331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n             $table->string('description');\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n-            $table->enum('stock_status',['instock','au'])\n+            $table->enum('stock_status',['instock','autostock']);\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862849129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n+            $table-\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862861275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n-            $table-\n+            $table->nullabe\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862871400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n-            $table->nullabe\n+            $table->boolean()\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862876553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n-            $table->boolean()\n+            $table->boolean('featured')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862882272,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n-            $table->boolean('featured')\n+            $table->boolean('featured')->default(false);\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862890049,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n+            $table->us\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862896150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n-            $table->us\n+            $table->unsignedInteger()\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862905409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n-            $table->unsignedInteger()\n+            $table->unsignedInteger('quean')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862910551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n-            $table->unsignedInteger('quean')\n+            $table->unsignedInteger('queantity';)\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862916299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n-            $table->unsignedInteger('queantity';)\n+            $table->unsignedInteger('queantity'))\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862925000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,10 @@\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n-            $table->unsignedInteger('queantity'))\n+            $table->unsignedInteger('queantity');\n+            \n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862937419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n-            $table->unsignedInteger('queantity');\n-            \n+            $table->unsignedInteger('queantity')->default(10);\n+\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862944954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,9 @@\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n+            $table->s\n \n             $table->timestamps();\n         });\n     }\n"
+                },
+                {
+                    "date": 1662862951285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,10 @@\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n-            $table->s\n+            $table->string('image');\n+            \n \n             $table->timestamps();\n         });\n     }\n"
+                },
+                {
+                    "date": 1662862958532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,11 @@\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n-            $table->string('image');\n-            \n+            $table->string('image')->nu\n \n+\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662862964744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,11 +24,10 @@\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n-            $table->string('image')->nu\n-\n-\n+            $table->string('image')->nullable();\n+            \n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662863060692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n             $table->string('image')->nullable();\n-            \n+            $table\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662863067575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n             $table->string('image')->nullable();\n-            $table\n+            $table->text('images')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662863073572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n             $table->string('image')->nullable();\n-            $table->text('images')\n+            $table->text('images')->nullable();\n+            \n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662863080763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n-            \n+            $table->\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662863087416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n-            $table->\n+            $table->bigInteger('categ')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662863093530,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n-            $table->bigInteger('categ')\n+            $table->bigInteger('categori')\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662863102154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n-            $table->bigInteger('categori')\n+            $table->bigInteger('category_id')->unsigned()\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662863107282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n             $table->boolean('featured')->default(false);\n             $table->unsignedInteger('queantity')->default(10);\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n-            $table->bigInteger('category_id')->unsigned()\n+            $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n         });\n     }\n \n"
+                },
+                {
+                    "date": 1662863112909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,9 @@\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n             $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n+            $table->\n         });\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1662863119020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n             $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n-            $table->\n+            $table->foreignId('')\n         });\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1662863127172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n             $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n-            $table->foreignId('')\n+            $table->foreignId('category_id')->references('id')\n         });\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1662863133642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n             $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n-            $table->foreignId('category_id')->references('id')\n+            $table->foreignId('category_id')->references('id')->on()\n         });\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1662863145747,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n             $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n-            $table->foreignId('category_id')->references('id')->on()\n+            $table->foreignId('category_id')->references('id')->on('category')->onDelete('case')\n         });\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1662867902863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n             $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n-            $table->foreignId('category_id')->references('id')->on('category')->onDelete('case')\n+            $table->foreign('category_id')->references('id')->on('category')->onDelete('casecade');\n         });\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1662867908079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     public function up()\n     {\n         Schema::create('products', function (Blueprint $table) {\n             $table->id();\n-            $table->string('nmae');\n+            $table->string('name');\n             $table->string('slug')->unique();\n             $table->string('short_description')->nullable();\n             $table->string('description');\n             $table->decimal('regular_price');\n"
+                },
+                {
+                    "date": 1662867936997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n             $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n-            $table->foreign('category_id')->references('id')->on('category')->onDelete('casecade');\n+            $table->foreign('category_id')->references('id')->on('category');\n         });\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1662867957469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n             $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n-            $table->foreign('category_id')->references('id')->on('category');\n+            $table->foreign('category_id')->references('id')->on('categories');\n         });\n     }\n \n     /**\n"
+                },
+                {
+                    "date": 1662869237385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n             $table->boolean('featured')->default(false);\n-            $table->unsignedInteger('queantity')->default(10);\n+            $table->unsignedInteger('quantity')->default(10);\n             $table->string('image')->nullable();\n             $table->text('images')->nullable();\n             $table->bigInteger('category_id')->unsigned()->nullable();\n             $table->timestamps();\n"
+                },
+                {
+                    "date": 1662869602855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n             $table->id();\n             $table->string('name');\n             $table->string('slug')->unique();\n             $table->string('short_description')->nullable();\n-            $table->tex('description');\n+            $table->text('description');\n             $table->decimal('regular_price');\n             $table->decimal('sale_price');\n             $table->string('SKU');\n             $table->enum('stock_status',['instock','autostock']);\n"
+                }
+            ],
+            "date": 1662862629759,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Database\\Migrations\\Migration;\nuse Illuminate\\Database\\Schema\\Blueprint;\nuse Illuminate\\Support\\Facades\\Schema;\n\nclass CreateProductsTable extends Migration\n{\n    /**\n     * Run the migrations.\n     *\n     * @return void\n     */\n    public function up()\n    {\n        Schema::create('products', function (Blueprint $table) {\n            $table->id();\n            $table\n            $table->timestamps();\n        });\n    }\n\n    /**\n     * Reverse the migrations.\n     *\n     * @return void\n     */\n    public function down()\n    {\n        Schema::dropIfExists('products');\n    }\n}\n"
+        }
+    ]
+}
