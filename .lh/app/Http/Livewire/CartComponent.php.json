@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 13,
+            "activePatchIndex": 14,
             "patches": [
                 {
                     "date": 1662564788746,
@@ -60,6 +60,10 @@
                 {
                     "date": 1662892064991,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,16 @@\n namespace App\\Http\\Livewire;\n // use Gloudemans\\Shoppingcart\\Facades\\Cart;\n // use Gloudemans\\Shoppingcart\\Cart;\n use Cart;\n-use Gloudemans\\Shoppingcart\\Facades\\Cart as FacadesCart;\n+\n+\n use Livewire\\Component;\n \n class CartComponent extends Component\n {\n     public function increaseQuantity($rowId){\n-        $product=FacadesCart\n+        $product=Car\n     }\n     public function render()\n     {\n         // return null;\n"
+                },
+                {
+                    "date": 1662897194000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n         Cart::update($rowId, $qty);\n     }\n     public function deleteQuantity($rowId){\n         Cart::remove($rowId);\n-        session()->flash('succe\n+        session()->flash('success', 'Cart\n     }\n     public function render()\n     {\n         // return null;\n"
                 }
             ],
             "date": 1662564788746,
