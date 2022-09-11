@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 53,
+            "activePatchIndex": 59,
             "patches": [
                 {
                     "date": 1662564917571,
@@ -220,6 +220,30 @@
                 {
                     "date": 1662871498378,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -78,16 +78,16 @@\n \t\t\t\t\t\t\t@endforeach\n \t\t\t\t\t\t</ul>\n \t\t\t\t\t</div>\n \t\t\t\t\t<div class=\"wrap-pagination-info\">\n-\t\t\t\t\t\t{{ $products->link }}\n-\t\t\t\t\t\t<ul class=\"page-numbers\">\n+\t\t\t\t\t\t{{ $products->links() }}\n+\t\t\t\t\t\t{{-- <ul class=\"page-numbers\">\n \t\t\t\t\t\t\t<li><span class=\"page-number-item current\" >1</span></li>\n \t\t\t\t\t\t\t<li><a class=\"page-number-item\" href=\"#\" >2</a></li>\n \t\t\t\t\t\t\t<li><a class=\"page-number-item\" href=\"#\" >3</a></li>\n \t\t\t\t\t\t\t<li><a class=\"page-number-item next-link\" href=\"#\" >Next</a></li>\n \t\t\t\t\t\t</ul>\n-\t\t\t\t\t\t<p class=\"result-count\">Showing 1-8 of 12 result</p>\n+\t\t\t\t\t\t<p class=\"result-count\">Showing 1-8 of 12 result</p> --}}\n \t\t\t\t\t</div>\n \t\t\t\t</div><!--end main products area-->\n \n \t\t\t\t<div class=\"col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar\">\n"
+                },
+                {
+                    "date": 1662872702259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,9 +82,9 @@\n \t\t\t\t\t\t{{ $products->links() }}\n \t\t\t\t\t\t{{-- <ul class=\"page-numbers\">\n \t\t\t\t\t\t\t<li><span class=\"page-number-item current\" >1</span></li>\n \t\t\t\t\t\t\t<li><a class=\"page-number-item\" href=\"#\" >2</a></li>\n-\t\t\t\t\t\t\t<li><a class=\"page-number-item\" href=\"#\" >3</a></li>\n+\t\t\t\t\t\t\t<li><a class=\"page-number-item\" href=\"#\" >3</a></li> \n \t\t\t\t\t\t\t<li><a class=\"page-number-item next-link\" href=\"#\" >Next</a></li>\n \t\t\t\t\t\t</ul>\n \t\t\t\t\t\t<p class=\"result-count\">Showing 1-8 of 12 result</p> --}}\n \t\t\t\t\t</div>\n"
+                },
+                {
+                    "date": 1662872717545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n \t\t\t\t\t\t\t@foreach ($products as $product)\n \t\t\t\t\t\t\t\t<li class=\"col-lg-4 col-md-6 col-sm-6 col-xs-6 \">\n \t\t\t\t\t\t\t\t\t<div class=\"product product-style-3 equal-elem \">\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-thumnail\">\n-\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.html\" title=\"{{ $product->name }}\">\n+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{  }}\" title=\"{{ $product->name }}\">\n \t\t\t\t\t\t\t\t\t\t\t\t<figure><img src=\"{{ asset('assets/images/products/') }}/{{ $product->image }}\" alt=\"{{ $product->name }}\"></figure>\n \t\t\t\t\t\t\t\t\t\t\t</a>\n \t\t\t\t\t\t\t\t\t\t</div>\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-info\">\n"
+                },
+                {
+                    "date": 1662872731246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n \t\t\t\t\t\t\t@foreach ($products as $product)\n \t\t\t\t\t\t\t\t<li class=\"col-lg-4 col-md-6 col-sm-6 col-xs-6 \">\n \t\t\t\t\t\t\t\t\t<div class=\"product product-style-3 equal-elem \">\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-thumnail\">\n-\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{  }}\" title=\"{{ $product->name }}\">\n+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ route }}\" title=\"{{ $product->name }}\">\n \t\t\t\t\t\t\t\t\t\t\t\t<figure><img src=\"{{ asset('assets/images/products/') }}/{{ $product->image }}\" alt=\"{{ $product->name }}\"></figure>\n \t\t\t\t\t\t\t\t\t\t\t</a>\n \t\t\t\t\t\t\t\t\t\t</div>\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-info\">\n"
+                },
+                {
+                    "date": 1662872744712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n \t\t\t\t\t\t\t@foreach ($products as $product)\n \t\t\t\t\t\t\t\t<li class=\"col-lg-4 col-md-6 col-sm-6 col-xs-6 \">\n \t\t\t\t\t\t\t\t\t<div class=\"product product-style-3 equal-elem \">\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-thumnail\">\n-\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ route }}\" title=\"{{ $product->name }}\">\n+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ route('product.details',['']) }}\" title=\"{{ $product->name }}\">\n \t\t\t\t\t\t\t\t\t\t\t\t<figure><img src=\"{{ asset('assets/images/products/') }}/{{ $product->image }}\" alt=\"{{ $product->name }}\"></figure>\n \t\t\t\t\t\t\t\t\t\t\t</a>\n \t\t\t\t\t\t\t\t\t\t</div>\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-info\">\n"
+                },
+                {
+                    "date": 1662872750665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n \t\t\t\t\t\t\t@foreach ($products as $product)\n \t\t\t\t\t\t\t\t<li class=\"col-lg-4 col-md-6 col-sm-6 col-xs-6 \">\n \t\t\t\t\t\t\t\t\t<div class=\"product product-style-3 equal-elem \">\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-thumnail\">\n-\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ route('product.details',['']) }}\" title=\"{{ $product->name }}\">\n+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ route('product.details',['slug'=>$product->id]) }}\" title=\"{{ $product->name }}\">\n \t\t\t\t\t\t\t\t\t\t\t\t<figure><img src=\"{{ asset('assets/images/products/') }}/{{ $product->image }}\" alt=\"{{ $product->name }}\"></figure>\n \t\t\t\t\t\t\t\t\t\t\t</a>\n \t\t\t\t\t\t\t\t\t\t</div>\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-info\">\n"
+                },
+                {
+                    "date": 1662872776679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,14 +63,14 @@\n \t\t\t\t\t\t\t@foreach ($products as $product)\n \t\t\t\t\t\t\t\t<li class=\"col-lg-4 col-md-6 col-sm-6 col-xs-6 \">\n \t\t\t\t\t\t\t\t\t<div class=\"product product-style-3 equal-elem \">\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-thumnail\">\n-\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ route('product.details',['slug'=>$product->id]) }}\" title=\"{{ $product->name }}\">\n+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ route('product.details',['slug'=>$product->slug]) }}\" title=\"{{ $product->name }}\">\n \t\t\t\t\t\t\t\t\t\t\t\t<figure><img src=\"{{ asset('assets/images/products/') }}/{{ $product->image }}\" alt=\"{{ $product->name }}\"></figure>\n \t\t\t\t\t\t\t\t\t\t\t</a>\n \t\t\t\t\t\t\t\t\t\t</div>\n \t\t\t\t\t\t\t\t\t\t<div class=\"product-info\">\n-\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"product-name\"><span>{{ $product->name }}</span></a>\n+\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ route('product.details',['slug'=>$product->slug]) }}\" class=\"product-name\"><span>{{ $product->name }}</span></a>\n \t\t\t\t\t\t\t\t\t\t\t<div class=\"wrap-price\"><span class=\"product-price\">{{ $product->regular_price }}</span></div>\n \t\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn add-to-cart\">Add To Cart</a>\n \t\t\t\t\t\t\t\t\t\t</div>\n \t\t\t\t\t\t\t\t\t</div>\n"
                 }
             ],
             "date": 1662564917571,

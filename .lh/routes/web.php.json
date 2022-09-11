@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 42,
+            "activePatchIndex": 47,
             "patches": [
                 {
                     "date": 1662563176849,
@@ -176,6 +176,26 @@
                 {
                     "date": 1662816621925,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',UserDashboardComponent::class)->name();\n+    Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n-    Route::get('/admin/dashboard',AdminDashboardComponent::class);\n+    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name();\n });\n"
+                },
+                {
+                    "date": 1662871666777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n+Route::get('/checkout',CheckoutComponent::class);\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n@@ -41,6 +42,6 @@\n     Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n-    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name();\n+    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');\n });\n"
+                },
+                {
+                    "date": 1662871672453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n-Route::get('/checkout',CheckoutComponent::class);\n+Route::get('/product',CheckoutComponent::class);\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n"
+                },
+                {
+                    "date": 1662871684609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n use App\\Http\\Livewire\\Admin\\AdminDashboardComponent;\n use App\\Http\\Livewire\\CartComponent;\n use App\\Http\\Livewire\\CheckoutComponent;\n+use App\\Http\\Livewire\\DetailsComponents;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n use App\\Http\\Livewire\\User\\UserDashboardComponent;\n use Illuminate\\Support\\Facades\\Route;\n@@ -25,9 +26,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n-Route::get('/product',CheckoutComponent::class);\n+Route::get('/product/{slug}',DetailsComponents::class);\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n"
+                },
+                {
+                    "date": 1662871692131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n-Route::get('/product/{slug}',DetailsComponents::class);\n+Route::get('/product/{slug}',DetailsComponents::class)->name();\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n"
+                },
+                {
+                    "date": 1662871700357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n-Route::get('/product/{slug}',DetailsComponents::class)->name();\n+Route::get('/product/{slug}',DetailsComponents::class)->name('product.details');\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n"
                 }
             ],
             "date": 1662563176849,
