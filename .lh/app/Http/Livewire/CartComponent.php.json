@@ -3,11 +3,39 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1662564788746,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662882153508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n <?php\n \n namespace App\\Http\\Livewire;\n \n+use Gloudemans\\Shoppingcart\\Facades\\Cart;\n+\n use Livewire\\Component;\n \n class CartComponent extends Component\n {\n"
+                },
+                {
+                    "date": 1662882281955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n namespace App\\Http\\Livewire;\n-\n use Gloudemans\\Shoppingcart\\Facades\\Cart;\n+use Gloudemans\\Shoppingcart\\Facades\\Cart;\n \n use Livewire\\Component;\n \n class CartComponent extends Component\n"
+                },
+                {
+                    "date": 1662882316580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <?php\n \n namespace App\\Http\\Livewire;\n use Gloudemans\\Shoppingcart\\Facades\\Cart;\n-use Gloudemans\\Shoppingcart\\Facades\\Cart;\n+// use Gloudemans\\Shoppingcart\\Cart;\n \n use Livewire\\Component;\n \n class CartComponent extends Component\n"
+                },
+                {
+                    "date": 1662882336517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n namespace App\\Http\\Livewire;\n-use Gloudemans\\Shoppingcart\\Facades\\Cart;\n+// use Gloudemans\\Shoppingcart\\Facades\\Cart;\n // use Gloudemans\\Shoppingcart\\Cart;\n \n use Livewire\\Component;\n \n"
+                },
+                {
+                    "date": 1662882548620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n \n namespace App\\Http\\Livewire;\n // use Gloudemans\\Shoppingcart\\Facades\\Cart;\n // use Gloudemans\\Shoppingcart\\Cart;\n+use Cart;\n \n+\n use Livewire\\Component;\n \n class CartComponent extends Component\n {\n"
+                },
+                {
+                    "date": 1662882568671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,8 @@\n class CartComponent extends Component\n {\n     public function render()\n     {\n-        return view('livewire.cart-component')->layout('Layouts.base');\n+        return null;\n+        // return view('livewire.cart-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1662882581813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n class CartComponent extends Component\n {\n     public function render()\n     {\n-        return null;\n-        // return view('livewire.cart-component')->layout('Layouts.base');\n+        // return null;\n+        return view('livewire.cart-component')->layout('Layouts.base');\n     }\n }\n"
                 }
             ],
             "date": 1662564788746,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 47,
+            "activePatchIndex": 48,
             "patches": [
                 {
                     "date": 1662563176849,
@@ -196,6 +196,10 @@
                 {
                     "date": 1662871700357,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n-Route::get('/product/{slug}',DetailsComponents::class)->name();\n+Route::get('/product/{slug}',DetailsComponents::class)->name('product.details');\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n"
+                },
+                {
+                    "date": 1662880289451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n-Route::get('/cart',CartComponent::class)->name();\n+Route::get('/cart',CartComponent::class)->name('');\n Route::get('/checkout',CheckoutComponent::class);\n Route::get('/product/{slug}',DetailsComponents::class)->name('product.details');\n \n // Route::middleware([\n"
                 }
             ],
             "date": 1662563176849,

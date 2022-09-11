@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 43,
+            "activePatchIndex": 45,
             "patches": [
                 {
                     "date": 1662871717245,
@@ -180,6 +180,14 @@
                 {
                     "date": 1662878608011,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,8 @@\n         $relate_product=Product::where('category_id',$product->category_id)->inRandomOrder()->limit(5)->get();\n         return view('livewire.details-components',[\n             'product' =>$product,\n             'popular_products' =>$popular_product,\n-            'relate_products' =>$relate_product\n+            'relate_products444444444444444444444444444' =>$relate_product\n         ])->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1662881501992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,14 @@\n     public function mount($slug){\n         $this->slug = $slug;\n \n     }\n+    public function store($product_id, $product_name, $product_price)\n+    {\n+        Cart::add($product_id, $product_name, 1, $product_price)->associate('App\\Models\\Product');\n+        session()->flash('success_message', 'Item Added successfully');\n+        return redirect()->route('product.cart');\n+    }\n     public function render()\n     {\n         $product=Product::where('slug',$this->slug)->first();\n         $popular_product=Product::inRandomOrder()->limit(4)->get();\n@@ -20,8 +26,8 @@\n         $relate_product=Product::where('category_id',$product->category_id)->inRandomOrder()->limit(5)->get();\n         return view('livewire.details-components',[\n             'product' =>$product,\n             'popular_products' =>$popular_product,\n-            'relate_products444444444444444444444444444' =>$relate_product\n+            'relate_products' =>$relate_product\n         ])->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1662881508014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n namespace App\\Http\\Livewire;\n \n use App\\Models\\Product;\n use Livewire\\Component;\n+use Cart\n \n class DetailsComponents extends Component\n {\n     public $slug;\n"
                 }
             ],
             "date": 1662871717245,
