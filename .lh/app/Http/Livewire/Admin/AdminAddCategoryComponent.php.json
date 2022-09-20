@@ -1,0 +1,106 @@
+{
+    "sourceFile": "app/Http/Livewire/Admin/AdminAddCategoryComponent.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 22,
+            "patches": [
+                {
+                    "date": 1663667219719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663677957038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n use Livewire\\Component;\n \n class AdminAddCategoryComponent extends Component\n {\n+    \n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663677963968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n use Livewire\\Component;\n \n class AdminAddCategoryComponent extends Component\n {\n+    public $name;\n     \n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663677969009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n class AdminAddCategoryComponent extends Component\n {\n     public $name;\n-    \n+    public $slug;\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663678010157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n class AdminAddCategoryComponent extends Component\n {\n     public $name;\n     public $slug;\n+    public function \n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663678015806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n class AdminAddCategoryComponent extends Component\n {\n     public $name;\n     public $slug;\n-    public function \n+    public function generateslug()\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663678021524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,11 @@\n class AdminAddCategoryComponent extends Component\n {\n     public $name;\n     public $slug;\n-    public function generateslug()\n+    public function generateslug(){\n+        $this->slug\n+    }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663678028111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n {\n     public $name;\n     public $slug;\n     public function generateslug(){\n-        $this->slug\n+        $this->slug=Str::sl\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678033375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n {\n     public $name;\n     public $slug;\n     public function generateslug(){\n-        $this->slug=Str::sl\n+        $this->slug=Str::slug($this->name);\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678039608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n namespace App\\Http\\Livewire\\Admin;\n+use\n \n use Livewire\\Component;\n \n class AdminAddCategoryComponent extends Component\n"
+                },
+                {
+                    "date": 1663678051550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n namespace App\\Http\\Livewire\\Admin;\n-use\n+use Illuminate\\\n \n use Livewire\\Component;\n \n class AdminAddCategoryComponent extends Component\n"
+                },
+                {
+                    "date": 1663678058471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n namespace App\\Http\\Livewire\\Admin;\n-use Illuminate\\\n+use Illuminate\\Support\\Str;\n \n use Livewire\\Component;\n \n class AdminAddCategoryComponent extends Component\n"
+                },
+                {
+                    "date": 1663678136358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n     public $slug;\n     public function generateslug(){\n         $this->slug=Str::slug($this->name);\n     }\n+    public function soreCategory\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663678144254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,11 @@\n     public $slug;\n     public function generateslug(){\n         $this->slug=Str::slug($this->name);\n     }\n-    public function soreCategory\n+    public function soreCategory(){\n+        $category=new L\n+    }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663678152046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n <?php\n \n namespace App\\Http\\Livewire\\Admin;\n+\n+use App\\Models\\Category;\n use Illuminate\\Support\\Str;\n \n use Livewire\\Component;\n \n@@ -12,9 +14,9 @@\n     public function generateslug(){\n         $this->slug=Str::slug($this->name);\n     }\n     public function soreCategory(){\n-        $category=new L\n+        $category=new Category()\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678158839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n     public function generateslug(){\n         $this->slug=Str::slug($this->name);\n     }\n     public function soreCategory(){\n-        $category=new Category()\n+        $category=new Category();\n+        $category->name\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678165212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n         $this->slug=Str::slug($this->name);\n     }\n     public function soreCategory(){\n         $category=new Category();\n-        $category->name\n+        $category->name=$this->name;\n+        \n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678170980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,10 @@\n     }\n     public function soreCategory(){\n         $category=new Category();\n         $category->name=$this->name;\n-        \n+        $category->slug=$this->slug;\n+        $category\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678179188,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,10 @@\n     public function soreCategory(){\n         $category=new Category();\n         $category->name=$this->name;\n         $category->slug=$this->slug;\n-        $category\n+        $category->save();\n+        session()\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678199023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         $category=new Category();\n         $category->name=$this->name;\n         $category->slug=$this->slug;\n         $category->save();\n-        session()\n+        session()->flash('message')\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678204314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         $category=new Category();\n         $category->name=$this->name;\n         $category->slug=$this->slug;\n         $category->save();\n-        session()->flash('message')\n+        session()->flash('message','Category added successfully')\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678210346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         $category=new Category();\n         $category->name=$this->name;\n         $category->slug=$this->slug;\n         $category->save();\n-        session()->flash('message','Category added successfully')\n+        session()->flash('message','Category added successfully!');\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663678335875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     public $slug;\n     public function generateslug(){\n         $this->slug=Str::slug($this->name);\n     }\n-    public function soreCategory(){\n+    public function storeCategory(){\n         $category=new Category();\n         $category->name=$this->name;\n         $category->slug=$this->slug;\n         $category->save();\n"
+                }
+            ],
+            "date": 1663667219719,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Livewire\\Admin;\n\nuse Livewire\\Component;\n\nclass AdminAddCategoryComponent extends Component\n{\n    public function render()\n    {\n        return view('livewire.admin.admin-add-category-component')->layout('Layouts.base');\n    }\n}\n"
+        }
+    ]
+}

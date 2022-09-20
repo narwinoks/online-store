@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 16,
+            "activePatchIndex": 17,
             "patches": [
                 {
                     "date": 1663596788308,
@@ -72,6 +72,10 @@
                 {
                     "date": 1663596904954,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n                 <div class=\"panel panel-default\">\n                     <div class=\"panle-heading\">\n                         All Categories\n                     </div>\n-                    .panel\n+                    .panel-\n                 </div>\n             </div>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1663667591283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n             <div class=\"col-md-12\">\n                 <div class=\"panel panel-default\">\n                     <div class=\"panel-heading\">\n                       <div class=\"row\">\n-                            <div class=\"col-md-\">\n+                            <div class=\"col-md-6\">\n                                All Categories\n                             </div>\n                             <div class=\"col-4\">\n                                 <a href=\"{{ route('admin.category') }}\" class=\"btn btn-success pull-right\">Add Category</a>\n"
                 }
             ],
             "date": 1663596788308,
