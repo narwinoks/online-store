@@ -74,7 +74,7 @@
 									var_dump(Auth::user()->utype)
 								@endphp
 								@if (Auth::user()->utype=='ADM')
-								<li class="menu-item menu-item-has-children parent" >
+								z<li class="menu-item menu-item-has-children parent" >
 									<a title="MY Accoutn" href="#">My Account ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu curency" >
 										<li class="menu-item" >
@@ -82,6 +82,9 @@
 										</li>
 										<li class="menu-item" >
 											<a title="categories" href="{{ route('admin.category') }}">Category</a>
+										</li> 
+										<li class="menu-item" >
+											<a title="products" href="{{ route('admin.products') }}">products</a>
 										</li>
 										<form action="{{ route('logout') }}" method="post" id="my_form">
 											@csrf

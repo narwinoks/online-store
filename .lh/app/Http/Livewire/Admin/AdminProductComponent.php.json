@@ -1,0 +1,50 @@
+{
+    "sourceFile": "app/Http/Livewire/Admin/AdminProductComponent.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1663680984008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663680994059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n class AdminProductComponent extends Component\n {\n     public function render()\n     {\n+        \n         return view('livewire.admin.admin-product-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663681000997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n <?php\n \n namespace App\\Http\\Livewire\\Admin;\n \n+use App\\Models\\Product;\n use Livewire\\Component;\n \n class AdminProductComponent extends Component\n {\n     public function render()\n     {\n-        \n+        $products=Product\n         return view('livewire.admin.admin-product-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663681007771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,8 @@\n class AdminProductComponent extends Component\n {\n     public function render()\n     {\n-        $products=Product\n+        $products=Product::paginate(10)\n         return view('livewire.admin.admin-product-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663681015536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,13 @@\n namespace App\\Http\\Livewire\\Admin;\n \n use App\\Models\\Product;\n use Livewire\\Component;\n-\n+use \n class AdminProductComponent extends Component\n {\n     public function render()\n     {\n-        $products=Product::paginate(10)\n+        $products=Product::paginate(10);\n         return view('livewire.admin.admin-product-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663681021822,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Http\\Livewire\\Admin;\n \n use App\\Models\\Product;\n use Livewire\\Component;\n-use \n+use Livewire\\WithPagination\n class AdminProductComponent extends Component\n {\n     public function render()\n     {\n"
+                },
+                {
+                    "date": 1663681026907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,12 @@\n namespace App\\Http\\Livewire\\Admin;\n \n use App\\Models\\Product;\n use Livewire\\Component;\n-use Livewire\\WithPagination\n+use Livewire\\WithPagination;\n class AdminProductComponent extends Component\n {\n+    use \n     public function render()\n     {\n         $products=Product::paginate(10);\n         return view('livewire.admin.admin-product-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663681036910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n use Livewire\\Component;\n use Livewire\\WithPagination;\n class AdminProductComponent extends Component\n {\n-    use \n+    use WithPagination;\n     public function render()\n     {\n         $products=Product::paginate(10);\n-        return view('livewire.admin.admin-product-component')->layout('Layouts.base');\n+        return view('livewire.admin.admin-product-component')->layout('Layouts.base',compact());\n     }\n }\n"
+                },
+                {
+                    "date": 1663682067307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n     use WithPagination;\n     public function render()\n     {\n         $products=Product::paginate(10);\n-        return view('livewire.admin.admin-product-component')->layout('Layouts.base',compact());\n+        return view('livewire.admin.admin-product-component')->layout('Layouts.base');\n     }\n }\n"
+                }
+            ],
+            "date": 1663680984008,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Livewire\\Admin;\n\nuse Livewire\\Component;\n\nclass AdminProductComponent extends Component\n{\n    public function render()\n    {\n        return view('livewire.admin.admin-product-component')->layout('Layouts.base');\n    }\n}\n"
+        }
+    ]
+}
