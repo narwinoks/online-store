@@ -1,0 +1,30 @@
+{
+    "sourceFile": "resources/views/livewire/admin/admin-edit-category-component.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1663679030953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663679047862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n                 <div class=\"panel panel-default\">\n                     <div class=\"panel-heading\">\n                         <div class=\"row\">\n                                 <div class=\"col-md-6\">\n-                                    Add New Category\n+                                    Edit Category\n                                 </div>\n                                 <div class=\"col-md-6\">\n                                     <a href=\"{{ route('admin.category') }}\" class=\"btn btn-success pull-right\" >All Category</a>\n                                 </div>\n"
+                },
+                {
+                    "date": 1663679054857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n                             </div>\n                             <div class=\"form-group\">\n                                 <label for=\"\" class=\"col-md-4 control-label\"></label>\n                                 <div class=\"col-md-4\">\n-                                   <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n+                                   <button type=\"submit\" class=\"btn btn-primary\">Update</button>\n                                 </div>\n                             </div>\n                        </form>\n                     </div>\n"
+                },
+                {
+                    "date": 1663679472149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n                             <div class=\"alert alert-success\" role=\"alert\">\n                                 {{ Session::get('message') }}\n                             </div>\n                         @endif\n-                       <form class=\"form-horizontal\" wire:submit.prevent=\"storeCategory\">\n+                       <form class=\"form-horizontal\" wire:submit.prevent=\"updateCategory\">\n                             <div class=\"form-group\">\n                                 <label for=\"\" class=\"col-md-4 control-label\">Category Name:</label>\n                                 <div class=\"col-md-4\">\n                                     <input type=\"text\" class=\"form-control input-md\" class=\"Category name\" wire:model=\"name\" wire:keyup=\"generateslug\">\n"
+                }
+            ],
+            "date": 1663679030953,
+            "name": "Commit-0",
+            "content": "<div>\n    <div class=\"container\" style=\"padding: 30px 0;\">\n        <div class=\"row\">\n            <div class=\"col-md-12\">\n                <div class=\"panel panel-default\">\n                    <div class=\"panel-heading\">\n                        <div class=\"row\">\n                                <div class=\"col-md-6\">\n                                    Add New Category\n                                </div>\n                                <div class=\"col-md-6\">\n                                    <a href=\"{{ route('admin.category') }}\" class=\"btn btn-success pull-right\" >All Category</a>\n                                </div>\n                        </div>\n                    </d iv>\n                    <div class=\"panel-body\">\n                        @if (Session::has('message'))\n                            <div class=\"alert alert-success\" role=\"alert\">\n                                {{ Session::get('message') }}\n                            </div>\n                        @endif\n                       <form class=\"form-horizontal\" wire:submit.prevent=\"storeCategory\">\n                            <div class=\"form-group\">\n                                <label for=\"\" class=\"col-md-4 control-label\">Category Name:</label>\n                                <div class=\"col-md-4\">\n                                    <input type=\"text\" class=\"form-control input-md\" class=\"Category name\" wire:model=\"name\" wire:keyup=\"generateslug\">\n                                </div>\n                            </div>\n                            <div class=\"form-group\">\n                                <label for=\"\" class=\"col-md-4 control-label\">Category Slug:</label>\n                                <div class=\"col-md-4\">\n                                    <input type=\"text\" class=\"form-control input-md\" class=\"Category slug\" wire:model=\"slug\">\n                                </div>\n                            </div>\n                            <div class=\"form-group\">\n                                <label for=\"\" class=\"col-md-4 control-label\"></label>\n                                <div class=\"col-md-4\">\n                                   <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n                                </div>\n                            </div>\n                       </form>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+        }
+    ]
+}
