@@ -69,18 +69,25 @@
 								</li>
 								@if (Route::has('login'))
 								@auth
+								@php
+									var_dump(session('utype'));
+									var_dump(Auth::user()->utype)
+								@endphp
 								@if (Auth::user()->utype=='ADM')
 								<li class="menu-item menu-item-has-children parent" >
 									<a title="MY Accoutn" href="#">My Account ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></a>
 									<ul class="submenu curency" >
 										<li class="menu-item" >
-											<a title="dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
+											<a title="dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
 										</li>
-										<form action="{{ route('logout') }}" method="post">
+										<li class="menu-item" >
+											<a title="categories" href="{{ route('admin.category') }}">Category</a>
+										</li>
+										<form action="{{ route('logout') }}" method="post" id="my_form">
 											@csrf
 											@method('POST')
 											<li class="menu-item" >
-												<a title="logout" href="{{ route('logout') }}" onclick="event.preventDefault(); .closest('form').submit">Logout</a>
+												<a title="logout"href="javascript:{}" onclick="document.getElementById('my_form').submit();">Logout</a>
 											</li>
 										</form>
 									</ul>

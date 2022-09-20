@@ -1,0 +1,82 @@
+{
+    "sourceFile": "resources/views/livewire/admin/admin-category-component.blade.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1663596788308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663596795236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,1 @@\n+</div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663596803818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n+<div>\n+    <div class=\"container\"></div>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663596811716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,5 @@\n <div>\n-    <div class=\"container\"></div>\n+    <div class=\"container\" style=\"\">\n+\n+    </div>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663596818215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <div>\n-    <div class=\"container\" style=\"\">\n+    <div class=\"container\" style=\"padding: 30px\">\n \n     </div>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663596823990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <div>\n-    <div class=\"container\" style=\"padding: 30px\">\n+    <div class=\"container\" style=\"padding: 30px 0;\">\n \n     </div>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663596831218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n <div>\n     <div class=\"container\" style=\"padding: 30px 0;\">\n-\n+        <div class=\"row\">\n+            .col\n+        </div>\n     </div>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663596838442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n <div>\n     <div class=\"container\" style=\"padding: 30px 0;\">\n         <div class=\"row\">\n-            .col\n+            <div class=\"col-md-12\">\n+                \n+            </div>\n         </div>\n     </div>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663596844913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n <div>\n     <div class=\"container\" style=\"padding: 30px 0;\">\n         <div class=\"row\">\n             <div class=\"col-md-12\">\n-                \n+                <div class=\"panel\">\n+                    \n+                </div>\n             </div>\n         </div>\n     </div>\n </div>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1663596850328,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <div>\n     <div class=\"container\" style=\"padding: 30px 0;\">\n         <div class=\"row\">\n             <div class=\"col-md-12\">\n-                <div class=\"panel\">\n-                    \n+                <div class=\"panel panel\">\n+\n                 </div>\n             </div>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1663596857916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n <div>\n     <div class=\"container\" style=\"padding: 30px 0;\">\n         <div class=\"row\">\n             <div class=\"col-md-12\">\n-                <div class=\"panel panel\">\n-\n+                <div class=\"panel panel-default\">\n+                    p\n                 </div>\n             </div>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1663596865267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     <div class=\"container\" style=\"padding: 30px 0;\">\n         <div class=\"row\">\n             <div class=\"col-md-12\">\n                 <div class=\"panel panel-default\">\n-                    p\n+                    pan\n                 </div>\n             </div>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1663596871938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n     <div class=\"container\" style=\"padding: 30px 0;\">\n         <div class=\"row\">\n             <div class=\"col-md-12\">\n                 <div class=\"panel panel-default\">\n-                    pan\n+                    <div class=\"panle\">\n+                        \n+                    </div>\n                 </div>\n             </div>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1663596882672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n     <div class=\"container\" style=\"padding: 30px 0;\">\n         <div class=\"row\">\n             <div class=\"col-md-12\">\n                 <div class=\"panel panel-default\">\n-                    <div class=\"panle\">\n-                        \n+                    <div class=\"panle-heading\">\n+\n                     </div>\n                 </div>\n             </div>\n         </div>\n"
+                },
+                {
+                    "date": 1663596890743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         <div class=\"row\">\n             <div class=\"col-md-12\">\n                 <div class=\"panel panel-default\">\n                     <div class=\"panle-heading\">\n-\n+                        \n                     </div>\n                 </div>\n             </div>\n         </div>\n"
+                },
+                {
+                    "date": 1663596897950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,11 @@\n         <div class=\"row\">\n             <div class=\"col-md-12\">\n                 <div class=\"panel panel-default\">\n                     <div class=\"panle-heading\">\n-                        \n+                        All Categories\n                     </div>\n+                    \n                 </div>\n             </div>\n         </div>\n     </div>\n"
+                },
+                {
+                    "date": 1663596904954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n                 <div class=\"panel panel-default\">\n                     <div class=\"panle-heading\">\n                         All Categories\n                     </div>\n-                    .panel\n+                    .panel-\n                 </div>\n             </div>\n         </div>\n     </div>\n"
+                }
+            ],
+            "date": 1663596788308,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

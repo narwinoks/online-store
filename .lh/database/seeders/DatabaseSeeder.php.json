@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 10,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1662868923457,
@@ -48,6 +48,10 @@
                 {
                     "date": 1662869148300,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,7 @@\n         // \\App\\Models\\User::factory(10)->create();\n         // \\APP\\Models\\Category::factory(6)->create();\n         // \\APP\\Models\\Product::factory(22)->create();\n         Category::factory(10)->create();\n-        Product::\n+        Product::factory(22)->create();\n     }\n }\n"
+                },
+                {
+                    "date": 1663592199565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,8 @@\n         Category::factory(6)->create();\n         Product::factory(22)->create();\n         User::create([\n             'name' => 'winarno',\n+            \n         ]);\n     }\n }\n"
                 }
             ],
             "date": 1662868923457,

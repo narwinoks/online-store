@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 15,
+            "activePatchIndex": 16,
             "patches": [
                 {
                     "date": 1662816126824,
@@ -68,6 +68,10 @@
                 {
                     "date": 1662816237280,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,12 +56,13 @@\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n-                session(['utype' => 'ADM']);\n+                session(['utype' => '']);\n                  return redirect(RouteServiceProvider::HOME);\n             }elseif (Auth::user()->utype == 'USR') {\n-                \n+                session(['utype' => 'ADM']);\n+                return redirect(RouteServiceProvider::HOME);\n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1663592699455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n-                session(['utype' => '']);\n+                session(['utype' => 'ADM']);\n                  return redirect(RouteServiceProvider::HOME);\n             }elseif (Auth::user()->utype == 'USR') {\n                 session(['utype' => 'ADM']);\n                 return redirect(RouteServiceProvider::HOME);\n"
                 }
             ],
             "date": 1662816126824,
