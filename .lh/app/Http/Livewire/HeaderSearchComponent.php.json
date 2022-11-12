@@ -1,0 +1,58 @@
+{
+    "sourceFile": "app/Http/Livewire/HeaderSearchComponent.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1663588640560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663588646648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n use Livewire\\Component;\n \n class HeaderSearchComponent extends Component\n {\n-    public \n+    public $search;\n+    \n     public function render()\n     {\n         return view('livewire.header-search-component');\n     }\n"
+                },
+                {
+                    "date": 1663588655270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n class HeaderSearchComponent extends Component\n {\n     public $search;\n-    \n+    public $product\n     public function render()\n     {\n         return view('livewire.header-search-component');\n     }\n"
+                },
+                {
+                    "date": 1663588664806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \n class HeaderSearchComponent extends Component\n {\n     public $search;\n+    public $product_cat;\n     public $product\n     public function render()\n     {\n         return view('livewire.header-search-component');\n"
+                },
+                {
+                    "date": 1663588672422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n class HeaderSearchComponent extends Component\n {\n     public $search;\n     public $product_cat;\n-    public $product\n+    public $product_cat_id;\n+    \n     public function render()\n     {\n         return view('livewire.header-search-component');\n     }\n"
+                },
+                {
+                    "date": 1663588679452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n {\n     public $search;\n     public $product_cat;\n     public $product_cat_id;\n-    \n+\n+    public functionmoun\n     public function render()\n     {\n         return view('livewire.header-search-component');\n     }\n"
+                },
+                {
+                    "date": 1663588685032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     public $search;\n     public $product_cat;\n     public $product_cat_id;\n \n-    public functionmoun\n+    public function mount\n     public function render()\n     {\n         return view('livewire.header-search-component');\n     }\n"
+                },
+                {
+                    "date": 1663588694545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,11 @@\n     public $search;\n     public $product_cat;\n     public $product_cat_id;\n \n-    public function mount\n+    public function mount(){\n+        $this-\n+    }\n     public function render()\n     {\n         return view('livewire.header-search-component');\n     }\n"
+                },
+                {
+                    "date": 1663588700350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     public $product_cat;\n     public $product_cat_id;\n \n     public function mount(){\n-        $this-\n+        $this->product_cat\n     }\n     public function render()\n     {\n         return view('livewire.header-search-component');\n"
+                },
+                {
+                    "date": 1663588707374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     public $product_cat;\n     public $product_cat_id;\n \n     public function mount(){\n-        $this->product_cat\n+        $this->product_cat='All Category'\n     }\n     public function render()\n     {\n         return view('livewire.header-search-component');\n"
+                },
+                {
+                    "date": 1663588716109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     public $product_cat_id;\n \n     public function mount(){\n         $this->product_cat='All Category';\n-        $this->fill\n+        $this->fill()\n     }\n     public function render()\n     {\n         return view('livewire.header-search-component');\n"
+                }
+            ],
+            "date": 1663588640560,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Livewire;\n\nuse Livewire\\Component;\n\nclass HeaderSearchComponent extends Component\n{\n    public \n    public function render()\n    {\n        return view('livewire.header-search-component');\n    }\n}\n"
+        }
+    ]
+}

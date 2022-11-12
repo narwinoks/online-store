@@ -1,0 +1,62 @@
+{
+    "sourceFile": "app/Http/Livewire/Admin/AdminCategoryComponent.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1663593410158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663593418607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n class AdminCategoryComponent extends Component\n {\n     public function render()\n     {\n-        return view('livewire.admin.admin-category-component')->;\n+        return view('livewire.admin.admin-category-component')->layout('');\n     }\n }\n"
+                },
+                {
+                    "date": 1663593424344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n class AdminCategoryComponent extends Component\n {\n     public function render()\n     {\n-        return view('livewire.admin.admin-category-component')->layout('');\n+        \n+        return view('livewire.admin.admin-category-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663593432711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n class AdminCategoryComponent extends Component\n {\n     public function render()\n     {\n-        \n+        $ca\n         return view('livewire.admin.admin-category-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663593439647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n <?php\n \n namespace App\\Http\\Livewire\\Admin;\n \n+use App\\Models\\Category;\n use Livewire\\Component;\n \n class AdminCategoryComponent extends Component\n {\n     public function render()\n     {\n-        $ca\n+        $categpries=Category::all()\n         return view('livewire.admin.admin-category-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663593464030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,13 +3,14 @@\n namespace App\\Http\\Livewire\\Admin;\n \n use App\\Models\\Category;\n use Livewire\\Component;\n+use Livewire\\;\n \n class AdminCategoryComponent extends Component\n {\n     public function render()\n     {\n-        $categpries=Category::all()\n+        $categpries=Category::all();\n         return view('livewire.admin.admin-category-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663593469523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Http\\Livewire\\Admin;\n \n use App\\Models\\Category;\n use Livewire\\Component;\n-use Livewire\\;\n+use Livewire\\WithPagination;\n \n class AdminCategoryComponent extends Component\n {\n     public function render()\n"
+                },
+                {
+                    "date": 1663593478814,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n class AdminCategoryComponent extends Component\n {\n     public function render()\n     {\n-        $categpries=Category::all();\n+        $categpries=Category::paginate;\n         return view('livewire.admin.admin-category-component')->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663596758993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n class AdminCategoryComponent extends Component\n {\n     public function render()\n     {\n-        $categpries=Category::paginate;\n-        return view('livewire.admin.admin-category-component')->layout('Layouts.base');\n+        $categpries=Category::paginate(5);\n+        return view('livewire.admin.admin-category-component',compact('ca'))->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663596771719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n class AdminCategoryComponent extends Component\n {\n     public function render()\n     {\n-        $categpries=Category::paginate(5);\n-        return view('livewire.admin.admin-category-component',compact('ca'))->layout('Layouts.base');\n+        $categories=Category::paginate(5);\n+        return view('livewire.admin.admin-category-component',compact('categories'))->layout('Layouts.base');\n     }\n }\n"
+                },
+                {
+                    "date": 1663679810683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n use Livewire\\WithPagination;\n \n class AdminCategoryComponent extends Component\n {\n+    \n     public function render()\n     {\n         $categories=Category::paginate(5);\n         return view('livewire.admin.admin-category-component',compact('categories'))->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679816219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n use Livewire\\WithPagination;\n \n class AdminCategoryComponent extends Component\n {\n-    public function del\n+    public function dele\n     public function render()\n     {\n         $categories=Category::paginate(5);\n         return view('livewire.admin.admin-category-component',compact('categories'))->layout('Layouts.base');\n"
+                }
+            ],
+            "date": 1663593410158,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Livewire\\Admin;\n\nuse Livewire\\Component;\n\nclass AdminCategoryComponent extends Component\n{\n    public function render()\n    {\n        return view('livewire.admin.admin-category-component')->;\n    }\n}\n"
+        }
+    ]
+}

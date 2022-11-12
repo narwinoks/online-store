@@ -1,0 +1,42 @@
+{
+    "sourceFile": "database/factories/ProductFactory.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1662868343553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662868355304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n      * @return array\n      */\n     public function definition()\n     {\n+        \n         $category_name = $this->faker->words($mb = 2, $asText = true);\n         $slug = Str::slug($category_name);\n         return [\n             //\n"
+                },
+                {
+                    "date": 1662868361899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n \n namespace Database\\Factories;\n \n use Illuminate\\Database\\Eloquent\\Factories\\Factory;\n+use Illuminate\\Support\\Str;\n \n+\n class ProductFactory extends Factory\n {\n     /**\n      * Define the model's default state.\n@@ -12,10 +14,10 @@\n      * @return array\n      */\n     public function definition()\n     {\n-        \n-        $category_name = $this->faker->words($mb = 2, $asText = true);\n+\n+        $category_name = $this->faker->words($mb = 4, $asText = true);\n         $slug = Str::slug($category_name);\n         return [\n             //\n         ];\n"
+                },
+                {
+                    "date": 1662868373336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n      */\n     public function definition()\n     {\n \n-        $category_name = $this->faker->words($mb = 4, $asText = true);\n+        $product_name = $this->faker->words($mb = 4, $asText = true);\n         $slug = Str::slug($category_name);\n         return [\n             //\n         ];\n"
+                },
+                {
+                    "date": 1662868380542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     public function definition()\n     {\n \n         $product_name = $this->faker->words($mb = 4, $asText = true);\n-        $slug = Str::slug($category_name);\n+        $slug = Str::slug($product_name;\n         return [\n             //\n         ];\n     }\n"
+                },
+                {
+                    "date": 1662868389763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,8 @@\n         $product_name = $this->faker->words($mb = 4, $asText = true);\n         $slug = Str::slug($product_name);\n         return [\n         'name' => $product_name,\n+        \n         ];\n     }\n }\n"
+                },
+                {
+                    "date": 1662868751745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             'short_description' =>$this->faker->text(200),\n             'description'=>$this->faker->text(500),\n             'regular_price'=>$this->faker->numberBetween(10,500),\n             'SKU'=>'DIGN'.$this->faker->numberBetween(10,500),\n-            'stock_status'=> 'instock'\n+            'stock_status'=> 'instock',\n \n         ];\n     }\n }\n"
+                }
+            ],
+            "date": 1662868343553,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace Database\\Factories;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\Factory;\n\nclass ProductFactory extends Factory\n{\n    /**\n     * Define the model's default state.\n     *\n     * @return array\n     */\n    public function definition()\n    {\n        $category_name = $this->faker->words($mb = 2, $asText = true);\n        $slug = Str::slug($category_name);\n        return [\n            //\n        ];\n    }\n}\n"
+        }
+    ]
+}

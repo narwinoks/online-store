@@ -1,0 +1,38 @@
+{
+    "sourceFile": "app/Models/Product.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1663681549436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663681559502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n class Product extends Model\n {\n     use HasFactory;\n }\n-pulic fun\n+public function category\n"
+                },
+                {
+                    "date": 1663681567354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,6 +7,8 @@\n \n class Product extends Model\n {\n     use HasFactory;\n+    public function category(){\n+        ret\n+    }\n }\n-public function category\n"
+                },
+                {
+                    "date": 1663681572837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n class Product extends Model\n {\n     use HasFactory;\n     public function category(){\n-        ret\n+        return $this\n     }\n }\n"
+                },
+                {
+                    "date": 1663681583954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n class Product extends Model\n {\n     use HasFactory;\n     public function category(){\n-        return $this\n+        return $this->belongsTo(Category::Class)\n     }\n }\n"
+                },
+                {
+                    "date": 1663681590237,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,7 +8,7 @@\n class Product extends Model\n {\n     use HasFactory;\n     public function category(){\n-        return $this->belongsTo(Category::Class)\n+        return $this->belongsTo(Category::);\n     }\n }\n"
+                }
+            ],
+            "date": 1663681549436,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Models;\n\nuse Illuminate\\Database\\Eloquent\\Factories\\HasFactory;\nuse Illuminate\\Database\\Eloquent\\Model;\n\nclass Product extends Model\n{\n    use HasFactory;\n}\npulic fun\n"
+        }
+    ]
+}

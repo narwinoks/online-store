@@ -1,0 +1,210 @@
+{
+    "sourceFile": "routes/web.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 48,
+            "patches": [
+                {
+                    "date": 1662563176849,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662563183182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n \n Route::get('/', function () {\n     return view('welcome');\n });\n-Route\n+Route::get('/admin', function () {  }\n"
+                },
+                {
+                    "date": 1662563189044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n \n Route::get('/', function () {\n     return view('welcome');\n });\n-Route::get('/admin', function () {  }\n+Route::get('/admin', )\n"
+                },
+                {
+                    "date": 1662563199435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+use App\\Http\\Livewire\\HomeComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n /*\n |--------------------------------------------------------------------------\n@@ -15,5 +16,5 @@\n \n Route::get('/', function () {\n     return view('welcome');\n });\n-Route::get('/admin', )\n+Route::get('/admin', HomeComponent::cla)\n"
+                },
+                {
+                    "date": 1662563205689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n \n Route::get('/', function () {\n     return view('welcome');\n });\n-Route::get('/admin', HomeComponent::cla)\n+Route::get('/admin', HomeComponent::class)\n"
+                },
+                {
+                    "date": 1662563211992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n | contains the \"web\" middleware group. Now create something great!\n |\n */\n \n-Route::get('/', function () {\n-    return view('welcome');\n-});\n-Route::get('/admin', HomeComponent::class)\n+// Route::get('/', function () {\n+//     return view('welcome');\n+// });\n+Route::get('/', HomeComponent::class)\n"
+                },
+                {
+                    "date": 1662564661129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,6 @@\n \n // Route::get('/', function () {\n //     return view('welcome');\n // });\n-Route::get('/', HomeComponent::class)\n+Route::get('/', HomeComponent::class);\n+\n"
+                },
+                {
+                    "date": 1662564667483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-\n+Route::get\n"
+                },
+                {
+                    "date": 1662564673874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get\n+Route::get'shop',\n"
+                },
+                {
+                    "date": 1662564682093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Livewire\\HomeComponent;\n+use App\\Http\\Livewire\\ShopComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n /*\n |--------------------------------------------------------------------------\n@@ -17,5 +18,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get'shop',\n+Route::get'shop',ShopComponent::Cla\n"
+                },
+                {
+                    "date": 1662564687886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get'shop',ShopComponent::Cla\n+Route::get'shop',ShopComponent::class\n"
+                },
+                {
+                    "date": 1662564695013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get'shop',ShopComponent::class\n+Route::get'shop',ShopComponent::class)\n"
+                },
+                {
+                    "date": 1662564706107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get'shop',ShopComponent::class)\n+Route::get('shop',ShopComponent::class)\n"
+                },
+                {
+                    "date": 1662564712404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,6 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get('shop',ShopComponent::class)\n+Route::get('shop',ShopComponent::class);\n+Route::get('shop',ShopComponent::class);\n"
+                },
+                {
+                    "date": 1662564719169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n // Route::get('/', function () {\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n-Route::get('shop',ShopComponent::class);\n-Route::get('shop',ShopComponent::class);\n+Route::get('/shop',ShopComponent::class);\n+Route::get('/catd',ShopComponent::class);\n"
+                },
+                {
+                    "date": 1662564726504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n-Route::get('/catd',ShopComponent::class);\n+Route::get('/cart',car::class);\n"
+                },
+                {
+                    "date": 1662564741687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+use App\\Http\\Livewire\\CartComponent;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n@@ -19,5 +20,6 @@\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n-Route::get('/cart',car::class);\n+Route::get('/cart',CartComponent::class);\n+Route::get('/cart',CartComponent::class);\n"
+                },
+                {
+                    "date": 1662564747762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,5 @@\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n-Route::get('/cart',CartComponent::class);\n+Route::get('/checkout',CartComponent::class);\n"
+                },
+                {
+                    "date": 1662564754955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,5 @@\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n-Route::get('/checkout',CartComponent::class);\n+Route::get('/checkout',che:class);\n"
+                },
+                {
+                    "date": 1662564763612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <?php\n \n use App\\Http\\Livewire\\CartComponent;\n+use App\\Http\\Livewire\\CheckoutComponent;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n@@ -21,5 +22,5 @@\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n-Route::get('/checkout',che:class);\n+Route::get('/checkout',CheckoutComponent:class);\n"
+                },
+                {
+                    "date": 1662650963622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,5 +22,15 @@\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n-Route::get('/checkout',CheckoutComponent:class);\n+Route::get('/checkout',CheckoutComponent::class);\n+\n+// Route::middleware([\n+//     'auth:sanctum',\n+//     config('jetstream.auth_session'),\n+//     'verified'\n+// ])->group(function () {\n+//     Route::get('/dashboard', function () {\n+//         return view('dashboard');\n+//     })->name('dashboard');\n+// });\n"
+                },
+                {
+                    "date": 1662650969726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,4 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n+Route::middleware(\n"
+                },
+                {
+                    "date": 1662650981537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-Route::middleware(\n+Route::middleware(['auth:sanctum']\n"
+                },
+                {
+                    "date": 1662650988930,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-Route::middleware(['auth:sanctum']\n+Route::middleware(['auth:sanctum'])\n"
+                },
+                {
+                    "date": 1662650994066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-Route::middleware(['auth:sanctum'])\n+Route::middleware(['auth:sanctum','verified'])\n"
+                },
+                {
+                    "date": 1662650999802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,5 +33,5 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-Route::middleware(['auth:sanctum','verified'])\n+Route::middleware(['auth:sanctum','verified'])->group(function () {\n"
+                },
+                {
+                    "date": 1662651007164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,4 +34,6 @@\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n+    \n+});\n"
+                },
+                {
+                    "date": 1662651030687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,8 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n+// FOR USER OR CUSOT\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    \n+\n });\n"
+                },
+                {
+                    "date": 1662651058513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,8 +33,9 @@\n //     Route::get('/dashboard', function () {\n //         return view('dashboard');\n //     })->name('dashboard');\n // });\n-// FOR USER OR CUSOT\n+// FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n \n });\n+// \n"
+                },
+                {
+                    "date": 1662651064352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,5 +37,5 @@\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n \n });\n-// \n+// FOR ADMIN\n"
+                },
+                {
+                    "date": 1662651084264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,5 +37,8 @@\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n \n });\n+Route::middleware(['auth:sanctum','verified'])->group(function () {\n+\n+});\n // FOR ADMIN\n"
+                },
+                {
+                    "date": 1662816522242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,8 +37,8 @@\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n \n });\n-Route::middleware(['auth:sanctum','verified'])->group(function () {\n+// FOR ADMIN\n+Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n });\n-// FOR ADMIN\n"
+                },
+                {
+                    "date": 1662816528828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-\n+    Route::get('/dashboard', function () {  \n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816535453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/dashboard', function () {  \n+    Route::get('//dashboard',\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816542152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('//dashboard',\n+    Route::get('/user/dashboard',)\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816549636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',)\n+    Route::get('/user/dashboard',[User])\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816556529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n use App\\Http\\Livewire\\CartComponent;\n use App\\Http\\Livewire\\CheckoutComponent;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n+use App\\Http\\Livewire\\User\\UserDashboardComponent;\n use Illuminate\\Support\\Facades\\Route;\n \n /*\n |--------------------------------------------------------------------------\n@@ -35,9 +36,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',[User])\n+    Route::get('/user/dashboard',[UserDashboardComponent::class])\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816567126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',[UserDashboardComponent::class])\n+    Route::get('/user/dashboard',[UserDashboardComponent::class)\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816576000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',[UserDashboardComponent::class)\n+    Route::get('/user/dashboard',UserDashboardComponent::class);\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n \n"
+                },
+                {
+                    "date": 1662816582314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,6 +40,7 @@\n     Route::get('/user/dashboard',UserDashboardComponent::class);\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n+    Route::get('/user/dashboard',UserDashboardComponent::class);\n \n });\n"
+                },
+                {
+                    "date": 1662816587913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n <?php\n \n+use App\\Http\\Livewire\\Admin\\AdminDashboardComponent;\n use App\\Http\\Livewire\\CartComponent;\n use App\\Http\\Livewire\\CheckoutComponent;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n@@ -40,7 +41,6 @@\n     Route::get('/user/dashboard',UserDashboardComponent::class);\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n-    Route::get('/user/dashboard',UserDashboardComponent::class);\n-\n+    Route::get('/user/dashboard',AdminDashboardComponent::class);\n });\n"
+                },
+                {
+                    "date": 1662816614085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',UserDashboardComponent::class);\n+    Route::get('/user/dashboard',UserDashboardComponent::class)->name();\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n-    Route::get('/user/dashboard',AdminDashboardComponent::class);\n+    Route::get('/admin/dashboard',AdminDashboardComponent::class);\n });\n"
+                },
+                {
+                    "date": 1662816621925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n //     })->name('dashboard');\n // });\n // FOR USER OR CUSTOMER\n Route::middleware(['auth:sanctum','verified'])->group(function () {\n-    Route::get('/user/dashboard',UserDashboardComponent::class)->name();\n+    Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n-    Route::get('/admin/dashboard',AdminDashboardComponent::class);\n+    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name();\n });\n"
+                },
+                {
+                    "date": 1662871666777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n+Route::get('/checkout',CheckoutComponent::class);\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n@@ -41,6 +42,6 @@\n     Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');\n });\n // FOR ADMIN\n Route::middleware(['auth:sanctum','verified','authadmin'])->group(function () {\n-    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name();\n+    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');\n });\n"
+                },
+                {
+                    "date": 1662871672453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n-Route::get('/checkout',CheckoutComponent::class);\n+Route::get('/product',CheckoutComponent::class);\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n"
+                },
+                {
+                    "date": 1662871684609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n \n use App\\Http\\Livewire\\Admin\\AdminDashboardComponent;\n use App\\Http\\Livewire\\CartComponent;\n use App\\Http\\Livewire\\CheckoutComponent;\n+use App\\Http\\Livewire\\DetailsComponents;\n use App\\Http\\Livewire\\HomeComponent;\n use App\\Http\\Livewire\\ShopComponent;\n use App\\Http\\Livewire\\User\\UserDashboardComponent;\n use Illuminate\\Support\\Facades\\Route;\n@@ -25,9 +26,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n-Route::get('/product',CheckoutComponent::class);\n+Route::get('/product/{slug}',DetailsComponents::class);\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n"
+                },
+                {
+                    "date": 1662871692131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n-Route::get('/product/{slug}',DetailsComponents::class);\n+Route::get('/product/{slug}',DetailsComponents::class)->name();\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n"
+                },
+                {
+                    "date": 1662871700357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n Route::get('/cart',CartComponent::class);\n Route::get('/checkout',CheckoutComponent::class);\n-Route::get('/product/{slug}',DetailsComponents::class)->name();\n+Route::get('/product/{slug}',DetailsComponents::class)->name('product.details');\n \n // Route::middleware([\n //     'auth:sanctum',\n //     config('jetstream.auth_session'),\n"
+                },
+                {
+                    "date": 1662880289451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n //     return view('welcome');\n // });\n Route::get('/', HomeComponent::class);\n Route::get('/shop',ShopComponent::class);\n-Route::get('/cart',CartComponent::class)->name();\n+Route::get('/cart',CartComponent::class)->name('');\n Route::get('/checkout',CheckoutComponent::class);\n Route::get('/product/{slug}',DetailsComponents::class)->name('product.details');\n \n // Route::middleware([\n"
+                }
+            ],
+            "date": 1662563176849,
+            "name": "Commit-0",
+            "content": "<?php\n\nuse Illuminate\\Support\\Facades\\Route;\n\n/*\n|--------------------------------------------------------------------------\n| Web Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register web routes for your application. These\n| routes are loaded by the RouteServiceProvider within a group which\n| contains the \"web\" middleware group. Now create something great!\n|\n*/\n\nRoute::get('/', function () {\n    return view('welcome');\n});\nRoute\n"
+        }
+    ]
+}

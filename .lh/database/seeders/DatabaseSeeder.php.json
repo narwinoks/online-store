@@ -1,0 +1,62 @@
+{
+    "sourceFile": "database/seeders/DatabaseSeeder.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1662868923457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662868930977,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n      */\n     public function run()\n     {\n         // \\App\\Models\\User::factory(10)->create();\n-        \\A\n+        \\APP\\Models\\Category\n     }\n }\n"
+                },
+                {
+                    "date": 1662868936992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,8 @@\n      */\n     public function run()\n     {\n         // \\App\\Models\\User::factory(10)->create();\n-        \\APP\\Models\\Category\n+        \\APP\\Models\\Category::factory(10)->create();\n+        \\APP\\Models\\Categ::factory(10)->create();\n     }\n }\n"
+                },
+                {
+                    "date": 1662868947430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n      */\n     public function run()\n     {\n         // \\App\\Models\\User::factory(10)->create();\n-        \\APP\\Models\\Category::factory(10)->create();\n-        \\APP\\Models\\Categ::factory(10)->create();\n+        \\APP\\Models\\Category::factory(6->create();\n+        \\APP\\Models\\Product::factory(10)->create();\n     }\n }\n"
+                },
+                {
+                    "date": 1662869008365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n      * @return void\n      */\n     public function run()\n     {\n-        // \\App\\Models\\User::factory(10)->create();\n-        \\APP\\Models\\Category::factory(6->create();\n-        \\APP\\Models\\Product::factory(10)->create();\n+        \\App\\Models\\User::factory(10)->create();\n+        // \\APP\\Models\\Category::factory(6)->create();\n+        // \\APP\\Models\\Product::factory(22)->create();\n     }\n }\n"
+                },
+                {
+                    "date": 1662869015858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n      */\n     public function run()\n     {\n         \\App\\Models\\User::factory(10)->create();\n-        // \\APP\\Models\\Category::factory(6)->create();\n+        \\APP\\Models\\Category::factory(6)->create();\n         // \\APP\\Models\\Product::factory(22)->create();\n     }\n }\n"
+                },
+                {
+                    "date": 1662869053123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace Database\\Seeders;\n \n+use App\\Models\\Category;\n use Illuminate\\Database\\Seeder;\n \n class DatabaseSeeder extends Seeder\n {\n@@ -15,6 +16,7 @@\n     {\n         \\App\\Models\\User::factory(10)->create();\n         \\APP\\Models\\Category::factory(6)->create();\n         // \\APP\\Models\\Product::factory(22)->create();\n+        Category::\n     }\n }\n"
+                },
+                {
+                    "date": 1662869128160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n      */\n     public function run()\n     {\n         \\App\\Models\\User::factory(10)->create();\n-        \\APP\\Models\\Category::factory(6)->create();\n+        // \\APP\\Models\\Category::factory(6)->create();\n         // \\APP\\Models\\Product::factory(22)->create();\n-        Category::\n+        \n     }\n }\n"
+                },
+                {
+                    "date": 1662869133525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,7 @@\n     {\n         \\App\\Models\\User::factory(10)->create();\n         // \\APP\\Models\\Category::factory(6)->create();\n         // \\APP\\Models\\Product::factory(22)->create();\n-        \n+        Category::factory(10)->create();\n     }\n }\n"
+                },
+                {
+                    "date": 1662869140087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n      * @return void\n      */\n     public function run()\n     {\n-        \\App\\Models\\User::factory(10)->create();\n+        // \\App\\Models\\User::factory(10)->create();\n         // \\APP\\Models\\Category::factory(6)->create();\n         // \\APP\\Models\\Product::factory(22)->create();\n         Category::factory(10)->create();\n     }\n"
+                },
+                {
+                    "date": 1662869148300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,7 @@\n         // \\App\\Models\\User::factory(10)->create();\n         // \\APP\\Models\\Category::factory(6)->create();\n         // \\APP\\Models\\Product::factory(22)->create();\n         Category::factory(10)->create();\n-        Product::\n+        Product::factory(22)->create();\n     }\n }\n"
+                },
+                {
+                    "date": 1663592199565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,7 +22,8 @@\n         Category::factory(6)->create();\n         Product::factory(22)->create();\n         User::create([\n             'name' => 'winarno',\n+            \n         ]);\n     }\n }\n"
+                }
+            ],
+            "date": 1662868923457,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace Database\\Seeders;\n\nuse Illuminate\\Database\\Seeder;\n\nclass DatabaseSeeder extends Seeder\n{\n    /**\n     * Seed the application's database.\n     *\n     * @return void\n     */\n    public function run()\n    {\n        // \\App\\Models\\User::factory(10)->create();\n        \\A\n    }\n}\n"
+        }
+    ]
+}

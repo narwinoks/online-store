@@ -1,0 +1,82 @@
+{
+    "sourceFile": "vendor/laravel/fortify/src/Actions/AttemptToAuthenticate.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1662816126824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662816138212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,11 @@\n         if ($this->guard->attempt(\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n-            if\n+            if (Auth::user()-utype) {\n+                # code...\n+            }\n             return $next($request);\n         }\n \n         $this->throwFailedAuthenticationException($request);\n"
+                },
+                {
+                    "date": 1662816144674,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n         if ($this->guard->attempt(\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n-            if (Auth::user()-utype) {\n+            if (Auth::user()->utype) {\n                 # code...\n             }\n             return $next($request);\n         }\n"
+                },
+                {
+                    "date": 1662816152321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n         if ($this->guard->attempt(\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n-            if (Auth::user()->utype) {\n+            if (Auth::user()->utype == ) {\n                 # code...\n             }\n             return $next($request);\n         }\n"
+                },
+                {
+                    "date": 1662816162855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n namespace Laravel\\Fortify\\Actions;\n \n use Illuminate\\Auth\\Events\\Failed;\n use Illuminate\\Contracts\\Auth\\StatefulGuard;\n+use Illuminate\\Support\\Facades\\Auth;\n use Illuminate\\Validation\\ValidationException;\n use Laravel\\Fortify\\Fortify;\n use Laravel\\Fortify\\LoginRateLimiter;\n \n@@ -53,9 +54,9 @@\n         if ($this->guard->attempt(\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n-            if (Auth::user()->utype == ) {\n+            if (Auth::user()->utype == 'ADM') {\n                 # code...\n             }\n             return $next($request);\n         }\n"
+                },
+                {
+                    "date": 1662816168226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n-                # code...\n+            \n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1662816175927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n-            \n+                session()\n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1662816181859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n-                session()\n+                session(['utype' => $request->])\n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1662816187230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n-                session(['utype' => $request->])\n+                session(['utype' => 'ADM']);\n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1662816196117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,8 +56,9 @@\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n                 session(['utype' => 'ADM']);\n+                 return redirect()\n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1662816202734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace Laravel\\Fortify\\Actions;\n \n+use App\\Providers\\RouteServiceProvider;\n use Illuminate\\Auth\\Events\\Failed;\n use Illuminate\\Contracts\\Auth\\StatefulGuard;\n use Illuminate\\Support\\Facades\\Auth;\n use Illuminate\\Validation\\ValidationException;\n@@ -56,9 +57,9 @@\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n                 session(['utype' => 'ADM']);\n-                 return redirect()\n+                 return redirect(RouteServiceProvider::)\n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1662816208070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,10 +57,10 @@\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n                 session(['utype' => 'ADM']);\n-                 return redirect(RouteServiceProvider::)\n-            }\n+                 return redirect(RouteServiceProvider::HOME);\n+            }else\n             return $next($request);\n         }\n \n         $this->throwFailedAuthenticationException($request);\n"
+                },
+                {
+                    "date": 1662816213454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,9 +58,11 @@\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n                 session(['utype' => 'ADM']);\n                  return redirect(RouteServiceProvider::HOME);\n-            }else\n+            }elseif (Auth::user()->utype == 'ADM') {\n+                \n+            }\n             return $next($request);\n         }\n \n         $this->throwFailedAuthenticationException($request);\n"
+                },
+                {
+                    "date": 1662816220142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,10 +58,10 @@\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n                 session(['utype' => 'ADM']);\n                  return redirect(RouteServiceProvider::HOME);\n-            }elseif (Auth::user()->utype == 'ADM') {\n-                \n+            }elseif (Auth::user()->utype == 'USR') {\n+\n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1662816226407,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n             if (Auth::user()->utype == 'ADM') {\n                 session(['utype' => 'ADM']);\n                  return redirect(RouteServiceProvider::HOME);\n             }elseif (Auth::user()->utype == 'USR') {\n-\n+                \n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1662816237280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,12 +56,13 @@\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n-                session(['utype' => 'ADM']);\n+                session(['utype' => '']);\n                  return redirect(RouteServiceProvider::HOME);\n             }elseif (Auth::user()->utype == 'USR') {\n-                \n+                session(['utype' => 'ADM']);\n+                return redirect(RouteServiceProvider::HOME);\n             }\n             return $next($request);\n         }\n \n"
+                },
+                {
+                    "date": 1663592699455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n             $request->only(Fortify::username(), 'password'),\n             $request->boolean('remember'))\n         ) {\n             if (Auth::user()->utype == 'ADM') {\n-                session(['utype' => '']);\n+                session(['utype' => 'ADM']);\n                  return redirect(RouteServiceProvider::HOME);\n             }elseif (Auth::user()->utype == 'USR') {\n                 session(['utype' => 'ADM']);\n                 return redirect(RouteServiceProvider::HOME);\n"
+                }
+            ],
+            "date": 1662816126824,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace Laravel\\Fortify\\Actions;\n\nuse Illuminate\\Auth\\Events\\Failed;\nuse Illuminate\\Contracts\\Auth\\StatefulGuard;\nuse Illuminate\\Validation\\ValidationException;\nuse Laravel\\Fortify\\Fortify;\nuse Laravel\\Fortify\\LoginRateLimiter;\n\nclass AttemptToAuthenticate\n{\n    /**\n     * The guard implementation.\n     *\n     * @var \\Illuminate\\Contracts\\Auth\\StatefulGuard\n     */\n    protected $guard;\n\n    /**\n     * The login rate limiter instance.\n     *\n     * @var \\Laravel\\Fortify\\LoginRateLimiter\n     */\n    protected $limiter;\n\n    /**\n     * Create a new controller instance.\n     *\n     * @param  \\Illuminate\\Contracts\\Auth\\StatefulGuard  $guard\n     * @param  \\Laravel\\Fortify\\LoginRateLimiter  $limiter\n     * @return void\n     */\n    public function __construct(StatefulGuard $guard, LoginRateLimiter $limiter)\n    {\n        $this->guard = $guard;\n        $this->limiter = $limiter;\n    }\n\n    /**\n     * Handle the incoming request.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @param  callable  $next\n     * @return mixed\n     */\n    public function handle($request, $next)\n    {\n        if (Fortify::$authenticateUsingCallback) {\n            return $this->handleUsingCustomCallback($request, $next);\n        }\n\n        if ($this->guard->attempt(\n            $request->only(Fortify::username(), 'password'),\n            $request->boolean('remember'))\n        ) {\n            if\n            return $next($request);\n        }\n\n        $this->throwFailedAuthenticationException($request);\n    }\n\n    /**\n     * Attempt to authenticate using a custom callback.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @param  callable  $next\n     * @return mixed\n     */\n    protected function handleUsingCustomCallback($request, $next)\n    {\n        $user = call_user_func(Fortify::$authenticateUsingCallback, $request);\n\n        if (! $user) {\n            $this->fireFailedEvent($request);\n\n            return $this->throwFailedAuthenticationException($request);\n        }\n\n        $this->guard->login($user, $request->boolean('remember'));\n\n        return $next($request);\n    }\n\n    /**\n     * Throw a failed authentication validation exception.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @return void\n     *\n     * @throws \\Illuminate\\Validation\\ValidationException\n     */\n    protected function throwFailedAuthenticationException($request)\n    {\n        $this->limiter->increment($request);\n\n        throw ValidationException::withMessages([\n            Fortify::username() => [trans('auth.failed')],\n        ]);\n    }\n\n    /**\n     * Fire the failed authentication attempt event with the given arguments.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @return void\n     */\n    protected function fireFailedEvent($request)\n    {\n        event(new Failed(config('fortify.guard'), null, [\n            Fortify::username() => $request->{Fortify::username()},\n            'password' => $request->password,\n        ]));\n    }\n}\n"
+        }
+    ]
+}

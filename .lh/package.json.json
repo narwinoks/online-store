@@ -1,0 +1,22 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1662647904730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662647914816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n {\n     \"private\": true,\n     \"scripts\": {\n         \"dev\": \"npm run development\",\n-        \"development\": \"vite\",\n+        \"development\": \"mix\",\n         \"watch\": \"mix watch\",\n         \"watch-poll\": \"mix watch -- --watch-options-poll=1000\",\n         \"hot\": \"mix watch --hot\",\n         \"prod\": \"npm run production\",\n"
+                }
+            ],
+            "date": 1662647904730,
+            "name": "Commit-0",
+            "content": "{\n    \"private\": true,\n    \"scripts\": {\n        \"dev\": \"npm run development\",\n        \"development\": \"vite\",\n        \"watch\": \"mix watch\",\n        \"watch-poll\": \"mix watch -- --watch-options-poll=1000\",\n        \"hot\": \"mix watch --hot\",\n        \"prod\": \"npm run production\",\n        \"production\": \"mix --production\"\n    },\n    \"devDependencies\": {\n        \"@tailwindcss/forms\": \"^0.5.2\",\n        \"@tailwindcss/typography\": \"^0.5.0\",\n        \"alpinejs\": \"^3.0.6\",\n        \"autoprefixer\": \"^10.4.7\",\n        \"axios\": \"^0.21\",\n        \"laravel-mix\": \"^6.0.6\",\n        \"lodash\": \"^4.17.19\",\n        \"postcss\": \"^8.4.14\",\n        \"tailwindcss\": \"^3.1.0\"\n    }\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "app/Http/Livewire/User/UserDashboardComponent.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1662816404226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662816441275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n class UserDashboardComponent extends Component\n {\n     public function render()\n     {\n-        return view('livewire.user.user-dashboard-component')->layout('Layouts.base');;\n+        return view('livewire.user.user-dashboard-component')->layout('Layouts.base'); ;\n     }\n }\n"
+                }
+            ],
+            "date": 1662816404226,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Livewire\\User;\n\nuse Livewire\\Component;\n\nclass UserDashboardComponent extends Component\n{\n    public function render()\n    {\n        return view('livewire.user.user-dashboard-component')->layout('Layouts.base');;\n    }\n}\n"
+        }
+    ]
+}

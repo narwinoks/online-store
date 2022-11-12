@@ -1,0 +1,66 @@
+{
+    "sourceFile": "app/Http/Middleware/AuthAdmin.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1662651157698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1662651166153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,7 @@\n      */\n     public function handle(Request $request, Closure $next)\n     {\n         // return $next($request);\n-        if\n+        if(session('utype'))\n     }\n }\n"
+                },
+                {
+                    "date": 1662651173022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,7 @@\n      */\n     public function handle(Request $request, Closure $next)\n     {\n         // return $next($request);\n-        if(session('utype'))\n+        if(session('utype')==='ADM')\n     }\n }\n"
+                },
+                {
+                    "date": 1662651181960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,9 @@\n      */\n     public function handle(Request $request, Closure $next)\n     {\n         // return $next($request);\n-        if(session('utype')==='ADM')\n+        if(session('utype')=='ADM'){\n+            RET\n+        }\n     }\n }\n"
+                },
+                {
+                    "date": 1662651189549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n     public function handle(Request $request, Closure $next)\n     {\n         // return $next($request);\n         if(session('utype')=='ADM'){\n-            RET\n+            return $request\n         }\n     }\n }\n"
+                },
+                {
+                    "date": 1662651196014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n     public function handle(Request $request, Closure $next)\n     {\n         // return $next($request);\n         if(session('utype')=='ADM'){\n-            return $request\n+            return $next($request);\n         }\n     }\n }\n"
+                },
+                {
+                    "date": 1662651204452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,7 +18,9 @@\n     {\n         // return $next($request);\n         if(session('utype')=='ADM'){\n             return $next($request);\n+        }else{\n+            \n         }\n     }\n }\n"
+                },
+                {
+                    "date": 1662651210354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,8 @@\n         // return $next($request);\n         if(session('utype')=='ADM'){\n             return $next($request);\n         }else{\n-            \n+            session()->fl\n         }\n     }\n }\n"
+                },
+                {
+                    "date": 1662651224400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n         // return $next($request);\n         if(session('utype')=='ADM'){\n             return $next($request);\n         }else{\n-            session()->fl\n+            session()->flash();\n+            return redirect()\n         }\n     }\n }\n"
+                },
+                {
+                    "date": 1662651232932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,8 @@\n         if(session('utype')=='ADM'){\n             return $next($request);\n         }else{\n             session()->flash();\n-            return redirect()\n+            return redirect('login')\n         }\n     }\n }\n"
+                },
+                {
+                    "date": 1662651243694,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,10 @@\n         if(session('utype')=='ADM'){\n             return $next($request);\n         }else{\n             session()->flash();\n-            return redirect('login')\n+            return redirect('login');\n+\n         }\n+        \n     }\n }\n"
+                },
+                {
+                    "date": 1662815994523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,11 +19,11 @@\n         // return $next($request);\n         if(session('utype')=='ADM'){\n             return $next($request);\n         }else{\n-            session()->flash();\n+            session()->flaus\n             return redirect('login');\n \n         }\n-        \n+        return $next($request);\n     }\n }\n"
+                },
+                {
+                    "date": 1662815999772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         // return $next($request);\n         if(session('utype')=='ADM'){\n             return $next($request);\n         }else{\n-            session()->flaus\n+            session()->flush();\n             return redirect('login');\n \n         }\n         return $next($request);\n"
+                }
+            ],
+            "date": 1662651157698,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Middleware;\n\nuse Closure;\nuse Illuminate\\Http\\Request;\n\nclass AuthAdmin\n{\n    /**\n     * Handle an incoming request.\n     *\n     * @param  \\Illuminate\\Http\\Request  $request\n     * @param  \\Closure(\\Illuminate\\Http\\Request): (\\Illuminate\\Http\\Response|\\Illuminate\\Http\\RedirectResponse)  $next\n     * @return \\Illuminate\\Http\\Response|\\Illuminate\\Http\\RedirectResponse\n     */\n    public function handle(Request $request, Closure $next)\n    {\n        // return $next($request);\n        if\n    }\n}\n"
+        }
+    ]
+}

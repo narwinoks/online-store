@@ -1,0 +1,118 @@
+{
+    "sourceFile": "app/Http/Livewire/Admin/AdminEditCategoryComponent.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1663679002278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1663679063475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n use Livewire\\Component;\n \n class AdminEditCategoryComponent extends Component\n {\n+    \n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679070515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n use Livewire\\Component;\n \n class AdminEditCategoryComponent extends Component\n {\n-    \n+    public $categ\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679076701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n use Livewire\\Component;\n \n class AdminEditCategoryComponent extends Component\n {\n-    public $categ\n+    public $category_slug;\n+    pu\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679085820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n class AdminEditCategoryComponent extends Component\n {\n     public $category_slug;\n-    pu\n+    public $cat_id\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679092405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \n class AdminEditCategoryComponent extends Component\n {\n     public $category_slug;\n-    public $cat_id\n+    public $cat\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679098273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n \n class AdminEditCategoryComponent extends Component\n {\n     public $category_slug;\n-    public $cat\n+    public $category_id;\n+    $\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679105010,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n class AdminEditCategoryComponent extends Component\n {\n     public $category_slug;\n     public $category_id;\n-    $\n+    public $name;\n+    \n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679118704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,11 @@\n {\n     public $category_slug;\n     public $category_id;\n     public $name;\n-    \n+    public $slug;\n+\n+    public function mount()\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679131688,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n     public $category_id;\n     public $name;\n     public $slug;\n \n-    public function mount()\n+    public function mount(){\n+\n+    }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679182811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,10 +10,10 @@\n     public $category_id;\n     public $name;\n     public $slug;\n \n-    public function mount(){\n-\n+    public function mount($category_slug){\n+        $this\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679198721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n     public $name;\n     public $slug;\n \n     public function mount($category_slug){\n-        $this\n+        $this->category_slug = $category_slug;\n+        $category\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679204683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <?php\n \n namespace App\\Http\\Livewire\\Admin;\n \n+use App\\Models\\Category;\n use Livewire\\Component;\n \n class AdminEditCategoryComponent extends Component\n {\n@@ -12,9 +13,9 @@\n     public $slug;\n \n     public function mount($category_slug){\n         $this->category_slug = $category_slug;\n-        $category\n+        $category=Category\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679211560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     public $slug;\n \n     public function mount($category_slug){\n         $this->category_slug = $category_slug;\n-        $category=Category\n+        $category=Category::where('slug')\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679218043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     public $slug;\n \n     public function mount($category_slug){\n         $this->category_slug = $category_slug;\n-        $category=Category::where('slug')\n+        $category=Category::where('slug',)\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679223367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     public $slug;\n \n     public function mount($category_slug){\n         $this->category_slug = $category_slug;\n-        $category=Category::where('slug',)\n+        $category=Category::where('slug',$category_slug)\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679228768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,10 @@\n     public $slug;\n \n     public function mount($category_slug){\n         $this->category_slug = $category_slug;\n-        $category=Category::where('slug',$category_slug)\n+        $category=Category::where('slug',$category_slug)->first();\n+        \n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679234138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n     public function mount($category_slug){\n         $this->category_slug = $category_slug;\n         $category=Category::where('slug',$category_slug)->first();\n-        \n+        $this->\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679242627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \n     public function mount($category_slug){\n         $this->category_slug = $category_slug;\n         $category=Category::where('slug',$category_slug)->first();\n-        $this->\n+        $this->category_id = $category\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679250924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,10 @@\n \n     public function mount($category_slug){\n         $this->category_slug = $category_slug;\n         $category=Category::where('slug',$category_slug)->first();\n-        $this->category_id = $category\n+        $this->category_id = $category->id;\n+        $this-\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679258508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,10 @@\n     public function mount($category_slug){\n         $this->category_slug = $category_slug;\n         $category=Category::where('slug',$category_slug)->first();\n         $this->category_id = $category->id;\n-        $this-\n+        $this->name = $category->name;\n+        $this->slug = $category->slug;\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679304838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,11 @@\n         $this->category_id = $category->id;\n         $this->name = $category->name;\n         $this->slug = $category->slug;\n     }\n+    public function generateslug(){\n+        \n+    }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n     }\n"
+                },
+                {
+                    "date": 1663679310700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         $this->name = $category->name;\n         $this->slug = $category->slug;\n     }\n     public function generateslug(){\n-        \n+        $this->slug = $this->\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679319833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n         $this->name = $category->name;\n         $this->slug = $category->slug;\n     }\n     public function generateslug(){\n-        $this->slug = $this->\n+        $this->slug = Str::slug($this)\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679328681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Http\\Livewire\\Admin;\n \n use App\\Models\\Category;\n use Livewire\\Component;\n-\n+use il\n class AdminEditCategoryComponent extends Component\n {\n     public $category_slug;\n     public $category_id;\n@@ -19,9 +19,9 @@\n         $this->name = $category->name;\n         $this->slug = $category->slug;\n     }\n     public function generateslug(){\n-        $this->slug = Str::slug($this)\n+        $this->slug = Str::slug($this->title);\n     }\n     public function render()\n     {\n         return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n"
+                },
+                {
+                    "date": 1663679334260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n namespace App\\Http\\Livewire\\Admin;\n \n use App\\Models\\Category;\n use Livewire\\Component;\n-use Illuminate\\Support\n+use Illuminate\\Support\\\n class AdminEditCategoryComponent extends Component\n {\n     public $category_slug;\n     public $category_id;\n"
+                }
+            ],
+            "date": 1663679002278,
+            "name": "Commit-0",
+            "content": "<?php\n\nnamespace App\\Http\\Livewire\\Admin;\n\nuse Livewire\\Component;\n\nclass AdminEditCategoryComponent extends Component\n{\n    public function render()\n    {\n        return view('livewire.admin.admin-edit-category-component')->layout('Layouts.base');\n    }\n}\n"
+        }
+    ]
+}
